@@ -27,7 +27,8 @@ Scenario: Criar cadastro com senha já existente
     When Eu insiro as informações de nome, email e senha, respectivamente "Julio", "kaiser@hotmail.com" e "CorrectHorseBatteryStaple"
     And Eu aperto em "Criar conta"
     Then Eu vejo uma mensagem "Conta Criada"
-    And Eu estou na página "Fazer login"
+    When eu confirmo a mensagem
+    Then Eu estou na página "Fazer login"
 Scenario: Criar cadastro com email inválido
     Given Eu estou deslogado
     And Eu estou na página "Criar cadastro"
