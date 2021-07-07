@@ -26,3 +26,4 @@ Scenario: Criar cadastro com email já existente
     When Eu insiro as informações de nome, email e senha, respectivamente "Barbara", "barbie100@hotmail.com" e "CorrectHorseBatteryStaple"
     And Eu aperto em "Criar conta"
     Then Eu vejo uma mensagem "Conta Criada"
+    And Eu estou na página "Fazer login"
