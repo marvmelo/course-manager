@@ -26,3 +26,10 @@ Scenario: Criar cadastro com email já existente
     When Eu insiro as informações de nome, email e senha, respectivamente "Barbara", "barbie100@hotmail.com" e "CorrectHorseBatteryStaple"
     And Eu aperto em "Criar conta"
     Then Eu vejo uma mensagem "Conta Criada"
+Scenario: Criar cadastro com email inválido
+    Given Eu estou deslogado
+    And Eu estou na página "Criar cadastro"
+    And Não há contas no sistema
+    When Eu insiro as informações de nome, email e senha, respectivamente "Barbara", "barbie100" e "CorrectHorseBatteryStaple"
+    And Eu aperto em "Criar conta"
+    Then Eu vejo uma mensagem "Insira dados válidos"
