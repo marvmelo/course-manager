@@ -5,6 +5,7 @@ Scenario: Criar cadastro bem sucedido
     When Eu insiro as informações de nome, email e senha, respectivamente "Barbara", "barbie100@hotmail.com" e "CorrectHorseBatteryStaple"
     And Eu aperto em "Criar conta"
     Then Eu vejo uma mensagem "Conta Criada"
+    And Eu estou na página "Fazer login"
 Scenario: Criar cadastro com email já existente
     Given Eu estou deslogado
     And Eu estou na página "Criar cadastro"
@@ -19,11 +20,11 @@ Scenario: Tentar criar cadastro sem informar dados
     When Eu aperto em "Clicar conta"
     Then Eu vejo uma mensagem "Formulário Incompleto"
     And Eu estou na página "Fazer login"
-Scenario: Criar cadastro com email já existente
+Scenario: Criar cadastro com senha já existente
     Given Eu estou deslogado
     And Eu estou na página "Criar cadastro"
-    And Há uma conta com a senha "CorrectHorseBatteryStaple", o email "barbie100@hotmail.com" e senha "CorrectHorseBatteryStaple"
-    When Eu insiro as informações de nome, email e senha, respectivamente "Barbara", "barbie100@hotmail.com" e "CorrectHorseBatteryStaple"
+    And Há uma conta com a senha "CorrectHorseBatteryStaple", o email "barbie100@hotmail.com" e nome "Barbara"
+    When Eu insiro as informações de nome, email e senha, respectivamente "Julio", "kaiser@hotmail.com" e "CorrectHorseBatteryStaple"
     And Eu aperto em "Criar conta"
     Then Eu vejo uma mensagem "Conta Criada"
     And Eu estou na página "Fazer login"
