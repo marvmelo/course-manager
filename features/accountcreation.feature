@@ -26,7 +26,7 @@ Scenario: Criar cadastro com email já existente
     When Eu insiro as informações de nome, email e senha, respectivamente "Barbara", "barbie100@hotmail.com" e "CorrectHorseBatteryStaple"
     And Eu aperto em "Criar conta"
     Then Eu vejo uma mensagem "Conta Criada"
-<<<<<<< HEAD
+    And Eu estou na página "Fazer login"
 Scenario: Criar cadastro com email inválido
     Given Eu estou deslogado
     And Eu estou na página "Criar cadastro"
@@ -34,6 +34,3 @@ Scenario: Criar cadastro com email inválido
     When Eu insiro as informações de nome, email e senha, respectivamente "Barbara", "barbie100" e "CorrectHorseBatteryStaple"
     And Eu aperto em "Criar conta"
     Then Eu vejo uma mensagem "Insira dados válidos"
-=======
-    And Eu estou na página "Fazer login"
->>>>>>> 140b5e7 (Fix em Criar cadastro com email em accountcreation)
