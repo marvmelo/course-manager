@@ -18,3 +18,4 @@ Scenario: Tentar criar cadastro sem informar dados
     And Os campos de nome, email e senha estão vazios.
     When Eu aperto em "Clicar conta"
     Then Eu vejo uma mensagem "Formulário Incompleto"
+    And Eu estou na página "Fazer login"
