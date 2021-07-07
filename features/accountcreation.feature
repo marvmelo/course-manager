@@ -18,3 +18,10 @@ Scenario: Tentar criar cadastro sem informar dados
     And Os campos de nome, email e senha estão vazios.
     When Eu aperto em "Clicar conta"
     Then Eu vejo uma mensagem "Formulário Incompleto"
+Scenario: Criar cadastro com email já existente
+    Given Eu estou deslogado
+    And Eu estou na página "Criar cadastro"
+    And Há uma conta com a senha "CorrectHorseBatteryStaple", o email "barbie100@hotmail.com" e senha "CorrectHorseBatteryStaple"
+    When Eu insiro as informações de nome, email e senha, respectivamente "Barbara", "barbie100@hotmail.com" e "CorrectHorseBatteryStaple"
+    And Eu aperto em "Criar conta"
+    Then Eu vejo uma mensagem "Conta Criada"
