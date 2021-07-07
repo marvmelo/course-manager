@@ -5,6 +5,7 @@ Scenario: Criar cadastro bem sucedido
     When Eu insiro as informações de nome, email e senha, respectivamente "Barbara", "barbie100@hotmail.com" e "CorrectHorseBatteryStaple"
     And Eu aperto em "Criar conta"
     Then Eu vejo uma mensagem "Conta Criada"
+    And Eu estou na página "Fazer login"
 Scenario: Criar cadastro com email já existente
     Given Eu estou deslogado
     And Eu estou na página "Criar cadastro"
