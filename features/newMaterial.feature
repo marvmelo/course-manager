@@ -7,3 +7,5 @@ Aparecerá um caixa com um local para o upload do vídeo ou arquivo selecionado.
 //coment 2
 //Correção do comment
 
+//Coment para comparar
+
