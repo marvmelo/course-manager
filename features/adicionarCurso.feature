@@ -46,5 +46,5 @@ Feature: Gerenciar curso
         And o curso está com status "Concluído"
         When excluo o curso
         Then vejo uma mensagem de sucesso "Curso excluído com sucesso"
-        * estou na página "Cursos"
+        And estou na página "Cursos"
         And não existe curso de título "Getting started with Javascript"
