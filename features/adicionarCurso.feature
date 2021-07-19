@@ -39,3 +39,4 @@ Feature: Gerenciar curso
         When tento excluir o curso
         Then vejo uma mensagem de erro "Não é possível excluir um curso em andamento. Modifique o status para cancelado ou concluído antes de excluir"
         And ainda estou na página do curso de título "Getting started with Javascript"
+        And o curso ainda está com status "Em andamento"
