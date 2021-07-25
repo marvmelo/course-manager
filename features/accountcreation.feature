@@ -1,3 +1,6 @@
+Feature: Criar Cadastro
+
+    Criação de conta no sistema
 Scenario: Criar cadastro bem sucedido
     Given Eu estou deslogado
     And Eu estou na página "Criar cadastro"
