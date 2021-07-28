@@ -8,7 +8,7 @@ export class HashingService {
 
   constructor() { }
 
-  HashString(text: string): string {
+  hashString(text: string): string {
     return hasha(text);
   }
 }
