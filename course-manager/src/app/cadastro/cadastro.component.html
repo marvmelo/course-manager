@@ -7,7 +7,7 @@
             Nome: 
         </td>
         <td>
-            <input name="namebox">
+            <input [(ngModel)]="name" name="namebox">
         </td>
     </tr>
     <tr>
@@ -15,7 +15,7 @@
             Email: 
         </td>
         <td>
-            <input name="emailbox">
+            <input [(ngModel)]="email" name="emailbox">
         </td>
     </tr>
     <tr>
@@ -23,10 +23,10 @@
             Senha: 
         </td>
         <td>
-            <input name="passwordbox">
+            <input [(ngModel)]="psw" name="passwordbox">
         </td>
     </tr>
     <tr>
-        <button>Confirmar</button>
+        <button (click)="createAccount(user)">Confirmar</button>
     </tr>
 </table>
