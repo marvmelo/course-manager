@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CadastroService } from '../cadastro.service';
-import { HashingService } from '../hashing.service';
 import { User } from '../user';
 
 @Component({
@@ -10,7 +9,7 @@ import { User } from '../user';
 })
 export class CadastroComponent implements OnInit {
 
-  constructor(private cadastroService: CadastroService, private hash: HashingService) { }
+  constructor(private cadastroService: CadastroService) { }
 
   name: string = "";
   email: string = "";
@@ -18,7 +17,7 @@ export class CadastroComponent implements OnInit {
   user: User = new User();
 
   createAccount(fUser: User): void {
-    fUser.set_user_data(this.name, this.email, this.hash.hashString(this.psw));
+    fUser.set_user_data(this.name, this.email, this.psw);
     this.cadastroService.sendNewUser(fUser);
   }
 
