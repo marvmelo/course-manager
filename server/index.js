@@ -18,3 +18,7 @@ app.post("/createAccount", function (req, res) {
     fs.appendFile("users.json", req.body);
     res.sendStatus(200);
 })
+
+var server = app.listen(3000, function () {
+    console.log('Example app listening on port 3000!')
+  })
