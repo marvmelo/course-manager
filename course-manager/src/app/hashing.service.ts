@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import * as hasha from 'hasha';
 
 @Injectable({
   providedIn: 'root'
@@ -6,4 +7,8 @@ import { Injectable } from '@angular/core';
 export class HashingService {
 
   constructor() { }
+
+  HashString(text: string): string {
+    return hasha(text);
+  }
 }
