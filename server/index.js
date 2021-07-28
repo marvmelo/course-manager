@@ -13,3 +13,8 @@ var allowCrossDomain = function(req, res, next) {
 
 app.use(allowCrossDomain);
 app.use(express.json());
+
+app.post("/createAccount", function (req, res) {
+    fs.appendFile("users.json", req.body);
+    res.sendStatus(200);
+})
