@@ -1,12 +1,12 @@
 export class User {
     nome: string;
     email: string;
-    hashedpsw: number;
+    hashedpsw: string;
 
     constructor() {
         this.nome = "";
         this.email = "";
-        this.hashedpsw = 0;
+        this.hashedpsw = "";
     }
 
     copy(): User {
@@ -17,7 +17,7 @@ export class User {
         return copiedUser; 
     }
 
-    set_user_data(nome: string, email: string, hashedpsw: number): void {
+    set_user_data(nome: string, email: string, hashedpsw: string): void {
         this.nome = nome;
         this.email = email;
         this.hashedpsw = hashedpsw;
