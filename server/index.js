@@ -17,10 +17,18 @@ app.use(express.json());
 var userDict = new Map();
 
 app.post("/createAccount", function (req, res) {
-    console.log(req.body.name);
-    res.sendStatus(200);
+    var newUser = new user.User();
+    newUser.set_user_data(req.body.nome, req.body.email, req.body.hashepwd);
+    if (userDict.has(newUser.email)) {
+        res.sendStatus(400);
+    }
+    else {
+        userDict.set(newUser.email, newUser);
+        res.sendStatus(200);
+    }
+    console.log(userDict);
 })
 
 var server = app.listen(3000, function () {
-    console.log('Example app listening on port 3000!')
+    console.log('App listening on port 3000!')
   })

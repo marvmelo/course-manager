@@ -1,4 +1,4 @@
-class User {
+exports.User = class {
     nome;
     email;
     hashedpsw;
