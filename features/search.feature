@@ -36,7 +36,12 @@ Feature: Pesquisar Curso
 	When: Eu pesquiso por "Calc"
 	Then: Os cursos "Calculo I", "Calculo II", "Calculo III", "Calculo IV"  aparecem para serem selecionados
 
+	Scenario: Pesquisa que retorna  nenhum resultado
+	Given: Eu estou na aba "Pesquisa"
+	And: Nenhum Curso está registrado no sistena
+	When: Eu deixo a caixa de pesquisa em branco
+	Then: Eu recebo uma mensagem informando que nenhum curso foi encontrado.
 
-
+	
 
 
