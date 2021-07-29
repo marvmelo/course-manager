@@ -44,7 +44,7 @@ Feature: Pesquisar Curso
 	And: Nenhum Curso está registrado no sistena
 	When: Eu deixo a caixa de pesquisa em branco
 	Then: Eu recebo uma mensagem informando que nenhum curso foi encontrado.
-
+	And: Eu posso fazer outra pesquisa
 	
 
 
