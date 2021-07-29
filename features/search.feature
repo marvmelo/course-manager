@@ -23,3 +23,15 @@ Feature: Pesquisar Curso
 	And: Os cursos "Introdução a Computação", "Introdução a Programação", "Introdução a Algoritmos" e "Deep Learning" estão cadastrados no sistema
 	When: Eu pesquiso por "Ethical Hacking"
 	Then: Eu recebo uma mensagem informando que nenhum curso foi encontrado.
+
+	Scenario: Pesquisa que retorna  nenhum resultado
+	Given: Eu estou na aba "Pesquisa"
+	And: Não há curso registrado no sistema
+	When: Eu pesquiso por "Ethical Hacking"
+	Then: Eu recebo uma mensagem informando que nenhum curso foi encontrado.
+
+
+
+
+
+
