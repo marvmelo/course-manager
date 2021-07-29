@@ -1,5 +1,5 @@
 
-var express = require('express');
+var express = require('express'); // Usamos a biblioteca express do nodejs
 var user = require("./user");
 
 var app = express();
@@ -11,11 +11,15 @@ var allowCrossDomain = function(req, res, next) {
     next();
 }
 
-app.use(allowCrossDomain);
-app.use(express.json());
+app.use(allowCrossDomain); // Isso permite o nosso frontend fazer requisições sem estar acoplado ao server
+app.use(express.json());  // O server espera receber arquivos json (Eu acho)
 
 var userDict = new Map();
 
+// Essa função é chamada quando o server recebe uma requisição POST enviada para /createAccount
+// Ela verifica se o email já está cadastro em userDict e cadastra, se não estiver.
+// Os paramêtros dela são endereço atribuido a ela e uma função cujos os paramêtros são a requisição e a resposta
+// Essa segunda função que processa a requisição e manda uma resposta
 app.post("/createAccount", function (req, res) {
     var newUser = new user.User();
     newUser.set_user_data(req.body.nome, req.body.email, req.body.hashepwd);
@@ -26,9 +30,10 @@ app.post("/createAccount", function (req, res) {
         userDict.set(newUser.email, newUser);
         res.sendStatus(200);
     }
-    console.log(userDict);
+    console.log(userDict); // É como um print
 })
 
+// Isso faz o servidor ficar olhando para a porta 3000 e esperando requisição
 var server = app.listen(3000, function () {
     console.log('App listening on port 3000!')
   })
