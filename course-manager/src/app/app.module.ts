@@ -13,9 +13,9 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    HttpClientModule, // Isso permite enviar http para o servidor
     AppRoutingModule,
-    FormsModule
+    FormsModule // Isso permite que html se comunique com o Typescript
   ],
   providers: [],
   bootstrap: [AppComponent]
