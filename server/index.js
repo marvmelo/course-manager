@@ -1,6 +1,6 @@
 
 var express = require('express');
-var fs = require('fs');
+var user = require("./user");
 
 var app = express();
 
@@ -14,8 +14,10 @@ var allowCrossDomain = function(req, res, next) {
 app.use(allowCrossDomain);
 app.use(express.json());
 
+var userDict = new Map();
+
 app.post("/createAccount", function (req, res) {
-    fs.appendFile("users.json", req.body);
+    console.log(req.body.name);
     res.sendStatus(200);
 })
 
