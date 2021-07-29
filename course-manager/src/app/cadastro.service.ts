@@ -12,7 +12,7 @@ export class CadastroService {
   constructor(private http: HttpClient) { }
 
   sendNewUser(user: User): Promise<User>{
-    return this.http.post<User>(this.serverUrl + "createAccount", JSON.stringify(user), {observe: 'body'})
+    return this.http.post<User>(this.serverUrl + "createAccount", user)
     .toPromise();
   }
 
