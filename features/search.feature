@@ -29,7 +29,7 @@ Feature: Pesquisar Curso
 	And: Não há curso registrado no sistema
 	When: Eu pesquiso por "Ethical Hacking"
 	Then: Eu recebo uma mensagem informando que nenhum curso foi encontrado.
-
+	And? Eu Posso fazer outra Pesquisa
 
 
 
