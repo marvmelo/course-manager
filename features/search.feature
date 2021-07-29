@@ -30,6 +30,11 @@ Feature: Pesquisar Curso
 	When: Eu pesquiso por "Ethical Hacking"
 	Then: Eu recebo uma mensagem informando que nenhum curso foi encontrado.
 
+	Scenario: Pesquisa que retorna mais de um resultado
+	Given: Eu estou na aba "Pesquisa"
+	And: Os cursos "Introdução a Computação", "Introdução a Programação", "Introdução a Algoritmos", "Calculo I", "Calculo II", "Calculo III", "Calculo IV"e "Deep Learning" estão cadastrados no sistema
+	When: Eu pesquiso por "Calc"
+	Then: Os cursos "Calculo I", "Calculo II", "Calculo III", "Calculo IV"  aparecem para serem selecionados
 
 
 
