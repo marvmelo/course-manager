@@ -18,8 +18,8 @@ Feature: Pesquisar Curso
 	When: Eu pesquiso por "Introdução"
 	Then: Os cursos "Introdução a Computação", "Introdução a Programação" e "Introdução a Algoritmos"  aparecem para serem selecinados
 
-	Scenario: Pesquisa que retorna mais de um resultado
+	Scenario: Pesquisa que retorna  nenhum resultado
 	Given: Eu estou na aba "Pesquisa"
 	And: Os cursos "Introdução a Computação", "Introdução a Programação", "Introdução a Algoritmos" e "Deep Learning" estão cadastrados no sistema
 	When: Eu pesquiso por "Ethical Hacking"
-	Then: Eu recebo uma mensagem informando que nenhum curso foi encontrado
+	Then: Eu recebo uma mensagem informando que nenhum curso foi encontrado.
