@@ -17,6 +17,10 @@ export class CadastroComponent implements OnInit {
   user: User = new User();
 
   createAccount(fUser: User): void {
+    // Essa função é chamada pelo html quando o botão é apertado
+    // O hmtl chama createAccount(this.user);
+    // As caixas de texto no html colocam os valores nas variáveis name, email e string
+    // A função coloca esses valores em user e passar user para a função de cadastroService que manda para o servidor
     fUser.set_user_data(this.name, this.email, this.psw);
     this.cadastroService.sendNewUser(fUser);
   }
