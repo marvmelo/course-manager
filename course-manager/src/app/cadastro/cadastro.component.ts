@@ -35,6 +35,13 @@ export class CadastroComponent implements OnInit {
     this. psw = "";
   }
 
+  private failureCreation(): void {
+    window.alert("Email já existente!");
+    this.name = "";
+    this.email = "";
+    this.psw = "";
+  }
+
   ngOnInit(): void {
   }
 
