@@ -14,9 +14,9 @@ export class CadastroService {
 
   // Essa função pegar um usuário e manda para http://localhost:3000/createAccount com uma requisição POST
   // Ela retorna uma promesa, que pode ser um User ou não em casos de sucesso e erro, respectivamente
-  sendNewUser(user: User): Promise<User>{
-    return this.http.post<User>(this.serverUrl + "createAccount", user)
-    .toPromise();
+  sendNewUser(user: User): Promise<string>{
+    return this.http.post<string>(this.serverUrl + "createAccount", user, {responseType: 'text' as 'json' , observe: 'body'})
+    .toPromise()
   }
 
 }
