@@ -24,7 +24,8 @@ export class CadastroComponent implements OnInit {
     fUser.set_user_data(this.name, this.email, this.psw);
     this.cadastroService.sendNewUser(fUser)
     .catch(
-      (error) => {console.log(error)}
+      (error) =>
+    {if (error.status==200) {this.succesCreation;} else {this.failureCreation;} console.log(error.status);}
     );
   }
 
