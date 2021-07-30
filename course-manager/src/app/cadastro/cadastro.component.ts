@@ -23,9 +23,9 @@ export class CadastroComponent implements OnInit {
     // A função coloca esses valores em user e passar user para a função de cadastroService que manda para o servidor
     fUser.set_user_data(this.name, this.email, this.psw);
     this.cadastroService.sendNewUser(fUser)
-    .catch(
-      (error) =>
-    {if (error.status=200) {this.succesCreation();} else {this.failureCreation();} console.log(error.status);}
+    .then(
+      (value) => {this.succesCreation();},
+      (value) => {if (value.error="Existing Email") {this.failureCreation();}}
     );
   }
 
