@@ -22,7 +22,7 @@ var userDict = new Map();
 // Essa segunda função que processa a requisição e manda uma resposta
 app.post("/createAccount", function (req, res) {
     var newUser = new user.User();
-    newUser.set_user_data(req.body.nome, req.body.email, req.body.hashepwd);
+    newUser.set_user_data(req.body.nome, req.body.email, req.body.hashedpsw);
     if (userDict.has(newUser.email)) {
         res.sendStatus(400);
     }
