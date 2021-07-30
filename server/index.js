@@ -24,11 +24,11 @@ app.post("/createAccount", function (req, res) {
     var newUser = new user.User();
     newUser.set_user_data(req.body.nome, req.body.email, req.body.hashedpsw);
     if (userDict.has(newUser.email)) {
-        res.sendStatus(400);
+        res.status(400).send("Existing Email");
     }
     else {
         userDict.set(newUser.email, newUser);
-        res.sendStatus(200);
+        res.status(200).send("Done");
     }
     console.log(userDict); // É como um print
 })
