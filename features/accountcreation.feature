@@ -11,8 +11,6 @@ Feature: Criar Cadastro
         When Eu insiro as informações de nome, email e senha, respectivamente "Barbara", "barbie100@hotmail.com" e "CorrectHorseBatteryStaple"
         And Eu aperto em "Criar conta"
         Then Eu vejo uma mensagem "Conta Criada"
-        When Eu confirmo a mensagem
-        Then Eu estou na página "Fazer login"
     Scenario: Criar cadastro com email já existente
         Given Eu estou deslogado
         And Eu estou na página "Criar cadastro"
@@ -33,5 +31,3 @@ Feature: Criar Cadastro
         When Eu insiro as informações de nome, email e senha, respectivamente "Julio", "kaiser@hotmail.com" e "CorrectHorseBatteryStaple"
         And Eu aperto em "Criar conta"
         Then Eu vejo uma mensagem "Conta Criada"
-        When eu confirmo a mensagem
-        Then Eu estou na página "Fazer login"
