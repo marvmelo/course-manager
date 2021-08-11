@@ -4,6 +4,7 @@
     "protractor": "^7.0.0"
   },
   "devDependencies": {
+    "@types/node": "^16.4.13",
     "chai": "^4.3.4",
     "protractor-cucumber-framework": "^8.2.3"
   }
