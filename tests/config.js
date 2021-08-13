@@ -1,4 +1,4 @@
-const { browser } = require("protractor");
+//const { browser } = require("protractor");
 
 /*
 Basic configuration to run your cucumber
@@ -23,6 +23,7 @@ exports.config = {
     ],
   
     // cucumber command line options
+    ignoreUncaughtExceptions: true,
     cucumberOpts: {
       require: ['/stepsdefinitions/*.js'],  // require step definition files before executing features
       tags: [],                      // <string[]> (expression) only execute the features or scenarios with tags matching the expression
