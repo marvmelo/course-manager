@@ -1,10 +1,4 @@
 {
-  "scripts": {
-    "tsc": "./node_modules/typescript/bin/tsc",
-    "test": "npm run tsc && protractor typeScript/config/config.js",
-    "webdriver-update": "webdriver-manager update",
-    "webdriver-start": "webdriver-manager start"
-  },
   "dependencies": {
     "cucumber-html-reporter": "^5.4.0",
     "protractor": "^7.0.0",

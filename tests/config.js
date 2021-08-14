@@ -8,7 +8,7 @@ exports.config = {
 
     seleniumAddress: 'http://localhost:4444/wd/hub',
   
-    baseUrl: 'https://angularjs.org/',
+    //baseUrl: 'https://localhost:4200/',
   
     capabilities: {
         browserName:'firefox'
@@ -25,11 +25,11 @@ exports.config = {
     // cucumber command line options
     ignoreUncaughtExceptions: true,
     cucumberOpts: {
-      require: ['/stepsdefinitions/*.js'],  // require step definition files before executing features
+      require: ['stepdefinitions/**/*.js'],  // require step definition files before executing features
       tags: [],                      // <string[]> (expression) only execute the features or scenarios with tags matching the expression
-      strict: true,                  // <boolean> fail if there are any undefined or pending steps
-      format: ["pretty"],            // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
-      'dry-run': false,              // <boolean> invoke formatters without executing steps
+      //strict: true,                  // <boolean> fail if there are any undefined or pending steps
+      format: ["json: results.json"],            // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
+      //'dry-run': false,              // <boolean> invoke formatters without executing steps
       compiler: []                   // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
     },
   
