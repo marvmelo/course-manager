@@ -47,5 +47,5 @@ Feature: Pesquisar Curso
 	Then: Eu recebo uma mensagem informando que nenhum curso foi encontrado.
 	And: Eu posso fazer outra pesquisa
 	
-
+	"pequeno ajuste no novo cenário search"
 
