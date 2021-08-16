@@ -1,14 +1,11 @@
-//const { browser } = require("protractor");
 
-/*
-Basic configuration to run your cucumber
-feature files and step definitions with protractor.
-**/
 exports.config = {
 
     seleniumAddress: 'http://localhost:4444/wd/hub',
   
     //baseUrl: 'https://localhost:4200/',
+
+    SELENIUM_PROMISE_MANAGER: false,
   
     capabilities: {
         browserName:'firefox'
@@ -34,7 +31,7 @@ exports.config = {
     },
   
    onPrepare: function () {
-      browser.waitForAngularEnabled();
+      browser.waitForAngularEnabled(false);
       browser.manage().window().maximize(); // maximize the browser before executing the feature files
     }
   };

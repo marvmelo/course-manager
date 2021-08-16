@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 2000000
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 440000000
             }
           },
           {
@@ -41,11 +41,11 @@
             "line": 10,
             "name": "não há conta com nome, email e senha \"Barbara\", \"CorrectHorseBatteryStaple\" e \"barbie100@hotmail.com\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:17"
+              "location": "stepdefinitions/accountcreation.js:18"
             },
             "result": {
-              "status": "pending",
-              "duration": 2000000
+              "status": "passed",
+              "duration": 0
             }
           },
           {
@@ -54,11 +54,11 @@
             "line": 11,
             "name": "eu insiro as informações de nome, email e senha \"Barbara\", \"barbie100@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:27"
+              "location": "stepdefinitions/accountcreation.js:26"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 262000000
             }
           },
           {
@@ -67,11 +67,11 @@
             "line": 12,
             "name": "eu aperto em \"Criar conta\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:32"
+              "location": "stepdefinitions/accountcreation.js:35"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 261000000
             }
           },
           {
@@ -80,11 +80,12 @@
             "line": 13,
             "name": "eu vejo uma mensagem \"Conta Criada\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:37"
+              "location": "stepdefinitions/accountcreation.js:40"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "failed",
+              "duration": 29000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -Email já existente!\n    +Conta Criada\n\n    at /home/marcusvm/Code/ess/tests/node_modules/chai-as-promised/lib/chai-as-promised.js:302:22\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at World.<anonymous> (/home/marcusvm/Code/ess/tests/stepdefinitions/accountcreation.js:43:3)"
             }
           },
           {
@@ -116,7 +117,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           },
           {
@@ -128,8 +129,9 @@
               "location": "stepdefinitions/accountcreation.js:13"
             },
             "result": {
-              "status": "passed",
-              "duration": 0
+              "status": "failed",
+              "duration": 22000000,
+              "error_message": "UnexpectedAlertOpenError: Dismissed user prompt dialog: Email já existente!: \nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'\nSystem info: host: 'marcus-hp', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.52-1-MANJARO', java.version: '1.8.0_292'\nDriver info: driver.version: unknown\n    at Object.checkLegacyResponse (/usr/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/error.js:553:13)\n    at parseHttpResponse (/usr/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at /usr/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/http.js:441:30\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at World.<anonymous> (/home/marcusvm/Code/ess/tests/stepdefinitions/accountcreation.js:14:3)"
             }
           },
           {
@@ -141,8 +143,8 @@
               "location": "stepdefinitions/accountcreation.js:22"
             },
             "result": {
-              "status": "pending",
-              "duration": 1000000
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -151,7 +153,7 @@
             "line": 18,
             "name": "eu insiro as informações de nome, email e senha \"Barbara\", \"barbie100@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:27"
+              "location": "stepdefinitions/accountcreation.js:26"
             },
             "result": {
               "status": "skipped",
@@ -164,7 +166,7 @@
             "line": 19,
             "name": "eu aperto em \"Criar conta\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:32"
+              "location": "stepdefinitions/accountcreation.js:35"
             },
             "result": {
               "status": "skipped",
@@ -177,7 +179,7 @@
             "line": 20,
             "name": "eu vejo uma mensagem \"Email já cadastrado\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:37"
+              "location": "stepdefinitions/accountcreation.js:40"
             },
             "result": {
               "status": "skipped",
@@ -226,7 +228,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 320000000
             }
           },
           {
@@ -235,11 +237,11 @@
             "line": 24,
             "name": "eu insiro as informações de nome, email e senha \"\", \"\" e \"\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:27"
+              "location": "stepdefinitions/accountcreation.js:26"
             },
             "result": {
-              "status": "pending",
-              "duration": 1000000
+              "status": "passed",
+              "duration": 130000000
             }
           },
           {
@@ -248,11 +250,11 @@
             "line": 25,
             "name": "eu aperto em \"Clicar conta\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:32"
+              "location": "stepdefinitions/accountcreation.js:35"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 148000000
             }
           },
           {
@@ -261,11 +263,12 @@
             "line": 26,
             "name": "eu vejo uma mensagem \"Formulário Incompleto\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:37"
+              "location": "stepdefinitions/accountcreation.js:40"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "failed",
+              "duration": 15000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -Email já existente!\n    +Formulário Incompleto\n\n    at /home/marcusvm/Code/ess/tests/node_modules/chai-as-promised/lib/chai-as-promised.js:302:22\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at World.<anonymous> (/home/marcusvm/Code/ess/tests/stepdefinitions/accountcreation.js:43:3)"
             }
           },
           {
@@ -273,7 +276,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 12000000
+              "duration": 11000000
             }
           }
         ],
@@ -297,7 +300,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 1000000
             }
           },
           {
@@ -309,8 +312,9 @@
               "location": "stepdefinitions/accountcreation.js:13"
             },
             "result": {
-              "status": "passed",
-              "duration": 0
+              "status": "failed",
+              "duration": 24000000,
+              "error_message": "UnexpectedAlertOpenError: Dismissed user prompt dialog: Email já existente!: \nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'\nSystem info: host: 'marcus-hp', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.52-1-MANJARO', java.version: '1.8.0_292'\nDriver info: driver.version: unknown\n    at Object.checkLegacyResponse (/usr/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/error.js:553:13)\n    at parseHttpResponse (/usr/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at /usr/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/http.js:441:30\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at World.<anonymous> (/home/marcusvm/Code/ess/tests/stepdefinitions/accountcreation.js:14:3)"
             }
           },
           {
@@ -322,8 +326,8 @@
               "location": "stepdefinitions/accountcreation.js:22"
             },
             "result": {
-              "status": "pending",
-              "duration": 2000000
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -332,7 +336,7 @@
             "line": 31,
             "name": "eu insiro as informações de nome, email e senha \"Julio\", \"kaiser@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:27"
+              "location": "stepdefinitions/accountcreation.js:26"
             },
             "result": {
               "status": "skipped",
@@ -345,7 +349,7 @@
             "line": 32,
             "name": "eu aperto em \"Criar conta\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:32"
+              "location": "stepdefinitions/accountcreation.js:35"
             },
             "result": {
               "status": "skipped",
@@ -358,7 +362,7 @@
             "line": 33,
             "name": "eu vejo uma mensagem \"Conta Criada\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:37"
+              "location": "stepdefinitions/accountcreation.js:40"
             },
             "result": {
               "status": "skipped",
@@ -370,7 +374,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 10000000
+              "duration": 11000000
             }
           }
         ],
@@ -450,7 +454,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 10000000
             }
           }
         ],
@@ -529,7 +533,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 11000000
             }
           }
         ],
@@ -687,7 +691,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 10000000
             }
           }
         ],
@@ -865,7 +869,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 11000000
             }
           }
         ],
@@ -900,7 +904,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 1000000
             }
           },
           {
@@ -913,7 +917,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 350000000
             }
           },
           {
@@ -942,7 +946,7 @@
             "line": 12,
             "name": "eu aperto em \"Acessar Conta\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:32"
+              "location": "stepdefinitions/accountcreation.js:35"
             },
             "result": {
               "status": "skipped",
@@ -998,7 +1002,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 0
             }
           },
           {
@@ -1011,7 +1015,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 339000000
             }
           },
           {
@@ -1040,7 +1044,7 @@
             "line": 20,
             "name": "eu aperto em \"Acessar Conta\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:32"
+              "location": "stepdefinitions/accountcreation.js:35"
             },
             "result": {
               "status": "skipped",
@@ -1086,7 +1090,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           },
           {
@@ -1099,7 +1103,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 188000000
             }
           },
           {
@@ -1118,7 +1122,7 @@
             "line": 26,
             "name": "eu aperto em \"Acessar Conta\"",
             "match": {
-              "location": "stepdefinitions/accountcreation.js:32"
+              "location": "stepdefinitions/accountcreation.js:35"
             },
             "result": {
               "status": "skipped",
