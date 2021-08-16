@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { GerenciarCursosComponent } from './gerenciar-cursos/gerenciar-cursos.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule }   from '@angular/router';
 
@@ -27,6 +28,10 @@ import { RouterModule }   from '@angular/router';
 			path: 'cursos',
 			component: CursosComponent
 
+		},
+		{
+			path: 'gerenciar-cursos',
+			component: GerenciarCursosComponent
 		}
 	])
   ],
