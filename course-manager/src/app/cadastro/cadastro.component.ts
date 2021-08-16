@@ -21,11 +21,15 @@ export class CadastroComponent implements OnInit {
     // O hmtl chama createAccount(this.user);
     // As caixas de texto no html colocam os valores nas variáveis name, email e string
     // A função coloca esses valores em user e passar user para a função de cadastroService que manda para o servidor
+    if (this.thereIsInvalidValues()) {
+      this.failureCreationInvalid();
+      return;
+    }
     fUser.set_user_data(this.name, this.email, this.psw);
     this.cadastroService.sendNewUser(fUser)
     .then(
       (value) => {this.succesCreation();},
-      (value) => {if (value.error="Existing Email") {this.failureCreation();}}
+      (value) => {if (value.error="Existing Email") {this.failureCreationExisting();}}
     );
   }
 
@@ -36,8 +40,19 @@ export class CadastroComponent implements OnInit {
     this. psw = "";
   }
 
-  private failureCreation(): void {
+  private failureCreationExisting(): void {
     window.alert("Email já existente!");
+  }
+
+  private failureCreationInvalid(): void {
+    window.alert("Formulário Incompleto!");
+  }
+
+  private thereIsInvalidValues(): Boolean {
+    if (this.name=="" || this.email=="" || this.psw=="") {
+      return true;
+    }
+    return false;
   }
 
   ngOnInit(): void {
