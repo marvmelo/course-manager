@@ -39,6 +39,7 @@ Feature: Pesquisar Curso
 	And? Eu Posso fazer outra Pesquisa
 
 
+
 	Scenario: Pesquisa que retorna  nenhum resultado
 	Given: Eu estou na aba "Pesquisa"
 	And: Nenhum Curso está registrado no sistena
