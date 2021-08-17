@@ -12,7 +12,9 @@ import { RouterModule }   from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroComponent
+    CadastroComponent,
+	GerenciarCursosComponent,
+	CursosComponent 
   ],
   imports: [
     BrowserModule,
