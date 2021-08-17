@@ -1,0 +1,27 @@
+header{
+
+	background-color: #6495ED;
+}
+
+header h1{
+
+	text-align: center;
+}
+nav{
+	text-align: center;
+}
+nav a {
+	padding: 4px 7px;
+	border-radius: 5px;
+	margin: 5px;
+	display: inline-block;
+	text-decoration: none;
+	color: #000000;
+	background-color: #00FA9A;
+	text-align: center;
+}
+
+nav a:hover{
+	color: #000000;
+	background-color: #F0E68C;
+}
