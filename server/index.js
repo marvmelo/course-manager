@@ -1,7 +1,7 @@
 
 var express = require('express'); // Usamos a biblioteca express do nodejs
 var user = require("./user");
-
+var curso = require("./curso");
 var app = express();
 
 var allowCrossDomain = function(req, res, next) {
@@ -32,6 +32,24 @@ app.post("/createAccount", function (req, res) {
     }
     console.log(userDict); // É como um print
 })
+
+
+var cursos = [];
+
+app.post('/cursos', function(req,res){
+
+    var newCurso = new curso.Curso();
+    newCurso.set(req.body.id,req.body.title,req.body.content);
+    res.status(200).send("Done");
+    cursos.push(newCurso);
+    console.log(cursos);
+
+})
+
+app.get('/cursos',function(req,res){
+    res.send(JSON.stringify(cursos));
+})
+
 
 // Isso faz o servidor ficar olhando para a porta 3000 e esperando requisição
 var server = app.listen(3000, function () {

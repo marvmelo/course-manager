@@ -1,1 +1,14 @@
-<h1>Pesquisar Cursos</h1>
+<html>
+    <table>
+        <tr>
+            <td><input [(ngModel)] = "searchText"></td>
+            <td><button (click) = "search(cursos,searchText)">Pesquisar</button></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr *ngFor = "let m of matches">
+            <td>{{m.title}}</td>
+        </tr>
+    </table>
+</html>
