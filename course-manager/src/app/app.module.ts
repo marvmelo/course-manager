@@ -14,12 +14,9 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     AppComponent,
     CadastroComponent,
-<<<<<<< HEAD
-    LoginComponent
-=======
+    LoginComponent,
 	GerenciarCursosComponent,
 	CursosComponent 
->>>>>>> f80740400689d2b38e51a296511cdca04e414c56
   ],
   imports: [
     BrowserModule,
