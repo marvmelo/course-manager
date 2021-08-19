@@ -9,9 +9,9 @@ import { Curso } from '../../../../common/curso';
 })
 export class CursosComponent implements OnInit {
 
-  curso:Curso = new Curso();
-  cursos:Curso[] = [new Curso(),new Curso(),new Curso(),new Curso(),new Curso()]
-  test:string[] = ["Calculadora", "Calculo I", "Informatica Teorica", "Sinais e Sistemas", "Deep Learning"];
+  //curso:Curso = new Curso();
+  cursos:Curso[] = []
+  //test:string[] = ["Calculadora", "Calculo I", "Informatica Teorica", "Sinais e Sistemas", "Deep Learning"];
   searchText:string = "";
   matches:Curso[] = [];
 
@@ -19,17 +19,24 @@ export class CursosComponent implements OnInit {
   constructor(private cadastroService: CadastroService) { }
 
 
-  fillTest() : void{
-    for(let i =0; i<this.cursos.length; i++){
-      this.cursos[i].title = this.test[i];
+  search(items:Curso[], searchText:string) : void {
+
+    if(searchText!= ""){
+      this.cadastroService.getCursos().then((value) => {
+
+        searchText = searchText.toLowerCase();
+        this.cadastroService.getCursos().then((value) => (this.cursos = value));
+        this.matches = items.filter(element => {return element.title.toLowerCase().includes(searchText)});
+      })
     }
+    else{
+      this.matches = []
+    }
+    
   }
 
-  search(items:Curso[], searchText:string) : void {
-    this.fillTest();
-    searchText = searchText.toLowerCase();
+  match(items: Curso, searchText:string): void{
 
-    this.matches = items.filter(element => {return element.title.toLowerCase().includes(searchText)});
     
   }
   ngOnInit(): void {
