@@ -1,0 +1,16 @@
+<html>
+<h2>Gerenciar Cursos</h2>
+<table>
+    <tr>
+        <td><label>Title</label></td>
+        <td><input [(ngModel)] = "curso.title"></td>
+    </tr>
+    <tr>
+        <td><label>Content</label></td>
+        <td><input  [(ngModel)] = "curso.content"></td>
+    </tr>
+    <tr>
+        <td style = "text-align:right;"> <button (click) =  "createCourse(curso)" name="why">Add</button></td>
+    </tr>
+</table>
+</html>

@@ -1,0 +1,1158 @@
+[
+  {
+    "description": "    As a usuário\n    I want to criar uma conta\n    So that eu possa usar os recursos da aplicação",
+    "elements": [
+      {
+        "description": "",
+        "id": "criar-cadastro;criar-cadastro-bem-sucedido",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Criar cadastro bem sucedido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "eu estou na página \"Criar cadastro\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 424000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "não há conta com nome, email e senha \"Barbara\", \"CorrectHorseBatteryStaple\" e \"barbie100@hotmail.com\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "eu insiro as informações de nome, email e senha \"Barbara\", \"barbie100@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 238000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "eu aperto em \"Criar conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 299000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "eu vejo uma mensagem \"Conta Criada!\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2043000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "criar-cadastro;criar-cadastro-com-email-já-existente",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Criar cadastro com email já existente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "eu estou na página \"Criar cadastro\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 310000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "há conta com nome, email e senha \"Barb\", \"barbie100@hotmail.com\", \"psw\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "eu insiro as informações de nome, email e senha \"Barbara\", \"barbie100@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 178000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "eu aperto em \"Criar conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 145000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "eu vejo uma mensagem \"Email já existente!\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2032000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "criar-cadastro;tentar-criar-cadastro-sem-informar-dados",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Tentar criar cadastro sem informar dados",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "eu estou na página \"Criar cadastro\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 321000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "eu insiro as informações de nome, email e senha \"\", \"\" e \"\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 217000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "eu aperto em \"Clicar conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 125000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "eu vejo uma mensagem \"Formulário Incompleto!\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2041000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "criar-cadastro;criar-cadastro-com-senha-já-existente",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Criar cadastro com senha já existente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "eu estou na página \"Criar cadastro\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 325000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "há conta com nome, email e senha \"Barb\", \"barbie100@hotmail.com\", \"CorrectHorseBatteryStaple\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "eu insiro as informações de nome, email e senha \"Julio\", \"kaiser@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 218000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "eu aperto em \"Criar conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 135000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "eu vejo uma mensagem \"Conta Criada!\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2054000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "criar-cadastro",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Criar Cadastro",
+    "tags": [],
+    "uri": "../features/accountcreation.feature"
+  },
+  {
+    "description": "    Como administrador ou professor vinculado à instituição\n    Desejo adicionar, remover e editar cursos\n    para que eu consiga disponibilizá-los aos alunos",
+    "elements": [
+      {
+        "description": "",
+        "id": "gerenciar-curso;cadastrar-curso-bem-sucedido",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Cadastrar curso bem sucedido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "estou logado como \"professor\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "estou na página \"Cursos\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "adiciono curso com título e capacidade máxima de alunos, respectivamente, \"Getting started with Javascript\" e \"25\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "estou na página do curso de título \"Getting started with Javascript\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "vejo uma mensagem de sucesso",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gerenciar-curso;cadastrar-curso-com-título-repetido",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Cadastrar curso com título repetido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "estou logado como \"professor\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "estou na página \"Cursos\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "existe um curso com título \"Getting started with Javascript\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "adiciono curso com título e capacidade máxima de alunos, respectivamente, \"Getting started with Javascript\" e \"25\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "estou na página do curso de título \"Getting started with Javascript\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "vejo uma mensagem de erro \"Curso com título já existente\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gerenciar-curso;modificar-status-do-curso",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Modificar status do curso",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "estou logado como \"professor\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "estou na página do curso de título \"Getting started with Javascript\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "o curso está com status \"Em andamento\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "mudo o status do curso para \"Concluído\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "vejo uma mensagem de confirmação",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "ainda estou na página do curso de título \"Getting started with Javascript\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gerenciar-curso;editar-curso-com-status-concluído",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Editar curso com status concluído",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "estou logado como \"professor\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "estou na página do curso de título \"Getting started with Javascript\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "o curso está com status \"Concluído\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "tento editar o curso",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "vejo uma mensagem de erro \"Não é possível editar o curso com status de concluído.\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "ainda estou na página do curso de título \"Getting started with Javascript\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gerenciar-curso;tentar-excluir-curso-com-status-\"em-andamento\"",
+        "keyword": "Scenario",
+        "line": 36,
+        "name": "Tentar excluir curso com status \"Em andamento\"",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "estou logado como \"professor\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 37,
+            "name": "estou na página do curso de título \"Getting started with Javascript\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "o curso está com status \"Em andamento\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 39,
+            "name": "tento excluir o curso",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 40,
+            "name": "vejo uma mensagem de erro \"Não é possível excluir um curso em andamento. Modifique o status para cancelado ou concluído antes de excluir\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "ainda estou na página do curso de título \"Getting started with Javascript\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "o curso ainda está com status \"Em andamento\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gerenciar-curso;excluir-curso-com-status-\"concluído\"",
+        "keyword": "Scenario",
+        "line": 44,
+        "name": "Excluir curso com status \"Concluído\"",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "estou logado como \"professor\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 45,
+            "name": "estou na página do curso de título \"Getting started with Javascript\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "o curso está com status \"Concluído\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 47,
+            "name": "excluo o curso",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 48,
+            "name": "vejo uma mensagem de sucesso \"Curso excluído com sucesso\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "estou na página \"Cursos\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "não existe curso de título \"Getting started with Javascript\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "gerenciar-curso",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Gerenciar curso",
+    "tags": [],
+    "uri": "../features/gerenciarCurso.feature"
+  },
+  {
+    "description": "    As a usuário\n    I want to logar\n    So that eu possa usar os recursos só diponíveis a usuários logados",
+    "elements": [
+      {
+        "description": "",
+        "id": "logar;fazer-login",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Fazer login",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "eu estou na página \"Fazer login\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 175000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Há uma conta com o email \"barbie100@hotmail.com\" e senha \"CorrectHorseBatteryStaple\" e nome \"Barbara\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "eu insiro as informações de email e senha, respectivamente \"barbie100@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "eu aperto em \"Acessar Conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:35"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "eu estou na página incial",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "eu estou logado como \"Barbara\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "logar;fazer-login-com-senha-errada",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Fazer login com senha errada",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "eu estou na página \"Fazer login\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 183000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "Há uma conta com o email \"barbie100@hotmail.com\" e senha \"CorrectHorseBatteryStaple\" e nome \"Barbara\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "eu insiro as informações de email e senha, respectivamente \"barbie100@hotmail.com\" e \"Trovador\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "eu aperto em \"Acessar Conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:35"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "eu vejo a mensagem \"Informações Incorretas\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "logar;fazer-login-sem-informar-dados",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Fazer login sem informar dados",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "eu estou na página \"Fazer login\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 181000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "Os campos nome e senha estão vazios",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "eu aperto em \"Acessar Conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreation.js:35"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "eu vejo a mensagem \"Informações Incorretas\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "logar",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Logar",
+    "tags": [],
+    "uri": "../features/login.feature"
+  }
+]
