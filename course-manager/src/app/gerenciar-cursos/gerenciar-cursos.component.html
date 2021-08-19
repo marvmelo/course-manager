@@ -4,13 +4,21 @@
     <tr>
         <td><label>Title</label></td>
         <td><input [(ngModel)] = "curso.title"></td>
+        <td style = "text-align:right;"> <button (click) =  "createCurso(curso)" name="why">Add</button></td>
     </tr>
     <tr>
         <td><label>Content</label></td>
         <td><input  [(ngModel)] = "curso.content"></td>
     </tr>
+</table>
+
+
+<table>
     <tr>
-        <td style = "text-align:right;"> <button (click) =  "createCourse(curso)" name="why">Add</button></td>
+        <td>Title</td>
+    </tr>
+    <tr *ngFor = "let c of cursos">
+        <td>{{c.title}}</td>
     </tr>
 </table>
 </html>
