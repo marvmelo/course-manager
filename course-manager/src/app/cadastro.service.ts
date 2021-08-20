@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from './user';
+import { Curso } from '../../../common/curso'
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +20,12 @@ export class CadastroService {
     .toPromise()
   }
 
+ sendNewCurso(curso:Curso): Promise<string>{
+   return this.http.post<string>(this.serverUrl + "cursos", curso, {responseType: 'text' as 'json', observe: 'body'}).toPromise();
+ }
+
+
+ getCursos() : Promise<Curso[]>{
+    return this.http.get<Curso[]>(this.serverUrl + "cursos").toPromise();
+ }
 }
