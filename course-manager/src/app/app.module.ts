@@ -8,14 +8,16 @@ import { CursosComponent } from './cursos/cursos.component';
 import { GerenciarCursosComponent } from './gerenciar-cursos/gerenciar-cursos.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule }   from '@angular/router';
+import { AdMaterialComponent } from './ad-material/ad-material.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroComponent,
 	GerenciarCursosComponent,
-	CursosComponent 
-  ],
+	CursosComponent,
+ 	AdMaterialComponent 
+  	],
   imports: [
     BrowserModule,
     HttpClientModule, // Isso permite enviar http para o servidor
@@ -34,6 +36,10 @@ import { RouterModule }   from '@angular/router';
 		{
 			path: 'gerenciar-cursos',
 			component: GerenciarCursosComponent
+		},
+		{
+			path: 'adicionar-material',
+			component: AdMaterialComponent
 		}
 	])
   ],
