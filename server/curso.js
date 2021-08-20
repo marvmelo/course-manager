@@ -1,8 +1,8 @@
-export class Curso{
+exports.Curso = class{
 
-    id: number;
-    title:string;
-    content:string;
+    id;
+    title;
+    content;
 
     constructor(){
         this.id = 0;
@@ -10,22 +10,16 @@ export class Curso{
         this.content = "";
     }
 
-    copy(): Curso {
-        var newCurso : Curso = new Curso();
+    copy() {
+        var newCurso  = new Curso();
         newCurso.id = this.id;
         newCurso.title = this.title;
         newCurso.content = this.content;
         return newCurso;
     }
-    set(id:number, title: string, content:string): void{
+    set(id, title, content) {
         this.id = id;
         this.title = title;
         this.content = content;
-    }
-
-    clear() :void{
-        this.id =  0;
-        this.title = "";
-        this.content = "";
     }
 }

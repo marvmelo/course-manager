@@ -2,15 +2,29 @@
 <h2>Gerenciar Cursos</h2>
 <table>
     <tr>
-        <td><label>Title</label></td>
+        <td><label>Título</label></td>
         <td><input [(ngModel)] = "curso.title"></td>
+        <td style = "text-align:right;"> <button (click) =  "createCurso(curso)" name="why">Adicionar</button></td>
     </tr>
     <tr>
-        <td><label>Content</label></td>
+        <td><label>Videos</label></td>
         <td><input  [(ngModel)] = "curso.content"></td>
     </tr>
     <tr>
-        <td style = "text-align:right;"> <button (click) =  "createCourse(curso)" name="why">Add</button></td>
+        <td><label>Apostila</label></td>
+        <td><button>Upload</button></td>
+    </tr>
+</table>
+
+
+<table>
+    <tr>
+        <td>Cursos</td>
+    </tr>
+    <tr *ngFor = "let c of cursos">
+        <td>{{c.title}}</td>
+        <td><button>Baixar Apostila</button></td>
+        <td><button>Assistir Vídeos</button></td>
     </tr>
 </table>
 </html>

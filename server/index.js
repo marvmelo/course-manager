@@ -2,7 +2,7 @@
 var express = require('express'); // Usamos a biblioteca express do nodejs
 var user = require("./user");
 var material = require("./material")
-
+var curso = require("./curso");
 var app = express();
 
 var allowCrossDomain = function(req, res, next) {
@@ -18,6 +18,8 @@ app.use(express.json());  // O server espera receber arquivos json (Eu acho)
 var userDict = new Map();
 
 var materialDict = new Map();
+
+var cursos = [];
 
 // Essa função é chamada quando o server recebe uma requisição POST enviada para /createAccount
 // Ela verifica se o email já está cadastro em userDict e cadastra, se não estiver.
@@ -51,10 +53,29 @@ app.post("/adMaterial", function (req, res) {
         res.status(200).send("Done");
     }
     console.log(userMaterial); // É como um print
-})
+
+    })
 
 
-// Isso faz o servidor ficar olhando para a porta 3000 e esperando requisição
-var server = app.listen(3000, function () {
+app.post('/cursos', function(req,res){
+
+    var newCurso = new curso.Curso();
+    newCurso.set(req.body.id,req.body.title,req.body.content);
+    res.status(200).send("Done");
+    cursos.push(newCurso);
+    console.log(cursos);
+
+    })
+
+app.get('/cursos',function(req,res){
+    res.send(JSON.stringify(cursos));
+    })
+
+
+    // Isso faz o servidor ficar olhando para a porta 3000 e esperando requisição
+    var server = app.listen(3000, function () {
     console.log('App listening on port 3000!')
-  })
+    })
+
+
+

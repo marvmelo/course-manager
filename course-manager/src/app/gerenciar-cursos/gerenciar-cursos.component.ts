@@ -16,19 +16,34 @@ export class GerenciarCursosComponent implements OnInit {
   constructor(private cadastroService: CadastroService) { }
 
   
-  createCourse(newCurso:Curso) :void{
-    console.log("Função Chamada");
-    alert("função chamada");
-    if(this.cursos.length == 0){
-        newCurso.id = 0;
+  createCurso(newCurso:Curso) :void{
+    //console.log("Função Chamada");
+    //alert("função chamada");
+
+    if(newCurso.title == ""){
+      alert("Título Vazio")
     }
     else{
-      newCurso.id = this.cursos[this.cursos.length -1].id +1;
-    }
-    alert(newCurso.id);
+      if(this.cursos.length == 0){
+          newCurso.id = 0;
+      }
+      else{
+        newCurso.id = this.cursos[this.cursos.length -1].id +1;
+      }
+      this.cadastroService.sendNewCurso(newCurso).then((value) => {alert("Curso Criado"); this.curso.clear(); this.fillCursos();});
+   }
   }
 
+  fillCursos() : void{
+
+    this.cadastroService.getCursos().then((value:Curso[]) => {this.cursos = value});
+  }
+
+
+
+
   ngOnInit(): void {
+    this.fillCursos();
   }
 
 }
