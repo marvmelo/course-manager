@@ -7,8 +7,12 @@
         <td style = "text-align:right;"> <button (click) =  "createCurso(curso)" name="why">Adicionar</button></td>
     </tr>
     <tr>
-        <td><label>Conteúdo</label></td>
+        <td><label>Videos</label></td>
         <td><input  [(ngModel)] = "curso.content"></td>
+    </tr>
+    <tr>
+        <td><label>Apostila</label></td>
+        <td><button>Upload</button></td>
     </tr>
 </table>
 
@@ -19,6 +23,8 @@
     </tr>
     <tr *ngFor = "let c of cursos">
         <td>{{c.title}}</td>
+        <td><button>Baixar Apostila</button></td>
+        <td><button>Assistir Vídeos</button></td>
     </tr>
 </table>
 </html>
