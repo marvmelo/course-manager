@@ -1,0 +1,72 @@
+[
+  {
+    "description": "\tAs a Usuário da plataforma\n\tI want to pesquisar por curso\n\tSo that eu posso acessá-los",
+    "elements": [
+      {
+        "description": "",
+        "id": "pesquisar-curso;pesquisa-que-retorna-apenas-um-resultado",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Pesquisa que retorna apenas um resultado",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "Os cursos \"Introdução a Computação\", \"Introdução a Programação\", \"Introdução a Algoritmos\" e \"Deep Learning\" estão cadastrados no sistema",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Eu estou na aba \"Pesquisa\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Eu pesquiso por \"Deep Learning\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "O curso \"Deep Learning\" aparece para ser selecionado",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "pesquisar-curso",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Pesquisar Curso",
+    "tags": [],
+    "uri": "../features/search-for-course.feature"
+  }
+]
