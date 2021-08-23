@@ -11,7 +11,7 @@ Given('eu estou deslogado', function () {
 });
 
 Given('eu estou na página {string}', async function (string) {
-  await browser.get("localhost:4200/");
+  await browser.get("localhost:4200/cadastro");
   await expect(browser.getTitle()).to.eventually.equal("CourseManager");
 });
 
