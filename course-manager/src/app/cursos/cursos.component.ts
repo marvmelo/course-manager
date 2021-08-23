@@ -30,7 +30,7 @@ export class CursosComponent implements OnInit {
       })
     }
     else{
-      this.matches = []
+      this.matches = [];
     }
     
   }

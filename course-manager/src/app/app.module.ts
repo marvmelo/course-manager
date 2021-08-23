@@ -8,7 +8,11 @@ import { CursosComponent } from './cursos/cursos.component';
 import { GerenciarCursosComponent } from './gerenciar-cursos/gerenciar-cursos.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule }   from '@angular/router';
+<<<<<<< HEAD
 import { LoginComponent } from './login/login.component';
+=======
+import { AdMaterialComponent } from './ad-material/ad-material.component';
+>>>>>>> 0707307375844515b27939233a221317382e1109
 
 @NgModule({
   declarations: [
@@ -16,8 +20,9 @@ import { LoginComponent } from './login/login.component';
     CadastroComponent,
     LoginComponent,
 	GerenciarCursosComponent,
-	CursosComponent 
-  ],
+	CursosComponent,
+ 	AdMaterialComponent 
+  	],
   imports: [
     BrowserModule,
     HttpClientModule, // Isso permite enviar http para o servidor
@@ -36,6 +41,10 @@ import { LoginComponent } from './login/login.component';
 		{
 			path: 'gerenciar-cursos',
 			component: GerenciarCursosComponent
+		},
+		{
+			path: 'adicionar-material',
+			component: AdMaterialComponent
 		}
 	])
   ],
