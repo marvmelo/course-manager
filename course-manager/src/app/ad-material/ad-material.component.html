@@ -1,0 +1,45 @@
+<h2>
+    Adicionar Material
+</h2>
+<table>  
+    <tr>
+        <td>
+            Nome do Arquivo
+        </td>
+        <td>
+            <input [(ngModel)]="nome" nome="namebox">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Tipo do arquivo
+        </td>
+        <td>
+            <input [(ngModel)]="tipo" name="tipobox">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Link para o arquivo
+        </td>
+        <td>
+            <input [(ngModel)]="link" name="linkbox">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Selecionar Curso
+        </td>
+        <select [(ngModel)]="selectCurso">
+            <option *ngFor="let c of cursos" [value]="c.id">
+              {{c.title}}
+            </option>
+        </select>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align: right;">
+            <button (click)="adMaterial(material)" name="materialbutton">Confirmar</button>
+        </td>
+    </tr>    
+</table>
