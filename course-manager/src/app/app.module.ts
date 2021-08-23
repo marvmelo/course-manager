@@ -8,11 +8,8 @@ import { CursosComponent } from './cursos/cursos.component';
 import { GerenciarCursosComponent } from './gerenciar-cursos/gerenciar-cursos.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule }   from '@angular/router';
-<<<<<<< HEAD
 import { LoginComponent } from './login/login.component';
-=======
 import { AdMaterialComponent } from './ad-material/ad-material.component';
->>>>>>> 0707307375844515b27939233a221317382e1109
 
 @NgModule({
   declarations: [
