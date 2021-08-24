@@ -7,34 +7,52 @@ chai.use(chaiAsPromised);
 var expect = chai.expect;
 
 Given('eu estou deslogado', function () {
-
+  await browser.get("localhost:4200");
+  await expect(browser.getTitle()).to.eventually.equal("CourseManager");
 });
 
-Given('eu estou na página {string}', async function (string) {
-  await browser.get("localhost:4200/cadastro");
-  await expect(browser.getTitle()).to.eventually.equal("CourseManager");
+Given('eu estou na página {string}', async function (pagina) {
+  if (pagina=="Fazer login") {
+    await browser.getCurrentUrl().to.eventually.equal("localhost:4200/cadastro").then( e => {console.log(e)});
+  }
+  else if (pagina=="Main") {
+    await browser.getCurrentUrl().to.eventually.equal("localhost:4200/main");
+  }
 });
 
 Given('não há conta com nome, email e senha {string}, {string} e {string}', function (string, string2, string3) {
 
 });
 
-Given('há conta com nome, email e senha {string}, {string}, {string}', function (string, string2, string3) {
+Given('há conta com nome, email e senha {string}, {string} e {string}', function (string, string2, string3) {
 
 });
 
-When('eu insiro as informações de nome, email e senha {string}, {string} e {string}', async function (nome, email, psd) {
-  await browser.wait(ExpectedConditions.presenceOf(element(by.name("namebox"))), 10000);
-  await element(by.name("namebox")).sendKeys(nome);
-  await browser.wait(ExpectedConditions.presenceOf($("input[name='emailbox']")), 10000);
+When('eu insiro as informações de email e senha {string} e {string}', async function(email, senha){
+  await browser.wait(ExpectedConditions.presenceOf($("input[name='emailbox']")), 1000);
   await $("input[name='emailbox']").clear().sendKeys(email);
-  await browser.wait(ExpectedConditions.presenceOf($("input[name='namebox']")), 10000);
-  await $("input[name='passwordbox']").clear().sendKeys(psd);
+  await browser.wait(ExpectedConditions.presenceOf($("input[name='passwordbox']")), 1000);
+  await $("input[name='passwordbox']").clear().sendKeys(senha);
 });
 
-When('eu aperto em {string}', async function (string) {
-  await browser.wait(ExpectedConditions.elementToBeClickable(element(by.name('accountbutton'))));
-  await element(by.name('accountbutton')).click();
+When('eu insiro as informações de nome, email e senha {string}, {string} e {string}', async function (nome, email, senha) {
+  await browser.wait(ExpectedConditions.presenceOf(element(by.name("namebox"))), 1000);
+  await element(by.name("namebox")).sendKeys(nome);
+  await browser.wait(ExpectedConditions.presenceOf($("input[name='emailbox']")), 1000);
+  await $("input[name='emailbox']").clear().sendKeys(email);
+  await browser.wait(ExpectedConditions.presenceOf($("input[name='passwordbox']")), 1000);
+  await $("input[name='passwordbox']").clear().sendKeys(senha);
+});
+
+When('eu aperto em {string}', async function (botao) {
+  if (botao=="Criar conta"){
+    await browser.wait(ExpectedConditions.elementToBeClickable(element(by.name('accountbutton'))));
+    await element(by.name('accountbutton')).click();
+  }
+  else if (botao=="Acessar Conta") {
+    await browser.wait(ExpectedConditions.elementToBeClickable(element(by.name('loginbutton'))));
+    await element(by.name('loginbutton')).click();
+  }
 });
 
 Then('eu vejo uma mensagem {string}', async function (mensagem) {
@@ -43,4 +61,11 @@ Then('eu vejo uma mensagem {string}', async function (mensagem) {
   await expect(alet_box.getText()).to.eventually.equal(mensagem);
   await alet_box.accept();
   await browser.sleep(2000);
+});
+
+Then('eu vou para página {string}', async function (pagina) {
+  if (pagina=="Fazer login") {
+    await browser.wait(ExpectedConditions.elementToBeClickable(element(by.name('loginredirect'))));
+    await element(by.name('loginredirect')).click();
+  }
 });
