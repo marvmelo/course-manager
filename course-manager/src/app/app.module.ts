@@ -27,6 +27,10 @@ import { AdMaterialComponent } from './ad-material/ad-material.component';
     FormsModule, // Isso permite que html se comunique com o Typescript
 	RouterModule.forRoot([
 		{
+			path: 'login',
+			component: LoginComponent
+		},
+		{
 			path: 'cadastro',
 			component: CadastroComponent
 		},
