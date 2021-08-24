@@ -7,7 +7,26 @@ chai.use(chaiAsPromised);
 var expect = chai.expect;
 //var aux = require("../aux");
 
+deleteCourses = async function(){
 
+    delButtons = element.all(by.name("removeButton"));
+
+    await delButtons.count().then(async function(count){
+        
+        while(count > 0){
+            await delButtons.first().click();
+            count --;
+        }
+        
+    })
+
+}
+
+
+addCourse = async function(curso){
+    await $("input[name = 'titleBox']").sendKeys(curso);
+    await element(by.name('addButton')).click();
+}
 
 
 
@@ -16,17 +35,15 @@ Given('Os cursos {string}, {string}, {string} e {string} estão cadastrados no s
 async function(curso1,curso2,curso3,curso4){
     await browser.get("localhost:4200/gerenciar-cursos");
     await expect(browser.getTitle()).to.eventually.equal("CourseManager"); 
-    await browser.wait(ExpectedConditions.presenceOf($("input[name='titleBox']")), 10000);
-    await browser.wait(ExpectedConditions.elementToBeClickable(element(by.name('addButton'))));
-    await $("input[name = 'titleBox']").sendKeys(curso1);
-    await element(by.name('addButton')).click();
-    await $("input[name = 'titleBox']").sendKeys(curso2);
-    await element(by.name('addButton')).click();
-    await $("input[name = 'titleBox']").sendKeys(curso3);
-    await element(by.name('addButton')).click();
-    await $("input[name = 'titleBox']").sendKeys(curso4);
-    await element(by.name('addButton')).click();
-   
+    //await browser.wait(ExpectedConditions.presenceOf($("input[name='titleBox']")), 10000);
+    //await browser.wait(ExpectedConditions.elementToBeClickable(element(by.name('addButton'))));
+
+    await deleteCourses();
+    await addCourse(curso1);
+    await addCourse(curso2);
+    await addCourse(curso3);
+    await addCourse(curso4);
+
 
 } );
 
