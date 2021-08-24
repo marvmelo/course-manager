@@ -38,6 +38,18 @@ app.post("/createAccount", function (req, res) {
     console.log(userDict); // É como um print
 })
 
+app.post("/login", function (req, res) {
+    var newUser = new user.User();
+    newUser.set_user_data(req.body.nome, req.body.email, req.body.hashedpsw);
+    if (userDict.has(newUser.email) && userDict[newUser.email].hashedpsw==newUser.hashedpsw) {
+        res.status(200).send(userDict[newUser.email]);
+    }
+    else {
+        res.status(400).send("Done");
+    }
+    console.log(userDict); // É como um print
+})
+
 // Essa função é chamada quando o server recebe uma requisição POST enviada para /adMaterial
 // Ela verifica se o link já está cadastro em materialDict e cadastra, se não estiver.
 // Os paramêtros dela são endereço atribuido a ela e uma função cujos os paramêtros são a requisição e a resposta
