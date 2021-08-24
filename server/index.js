@@ -43,16 +43,16 @@ app.post("/createAccount", function (req, res) {
 // Os paramêtros dela são endereço atribuido a ela e uma função cujos os paramêtros são a requisição e a resposta
 // Essa segunda função que processa a requisição e manda uma resposta
 app.post("/adMaterial", function (req, res) {
-    var newMaterial = new user.Material();
+    var newMaterial = new material.Material();
     newMaterial.set_material_data(req.body.nome, req.body.tipo, req.body.link);
-    if (materialDict.has(newUser.link)) {
+    if (materialDict.has(newMaterial.link)) {
         res.status(400).send("Existing Material");
     }
     else {
         materialDict.set(newMaterial.link, newMaterial);
         res.status(200).send("Done");
     }
-    console.log(userMaterial); // É como um print
+    console.log(materialDict); // É como um print
 
     })
 
