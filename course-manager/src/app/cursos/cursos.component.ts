@@ -14,7 +14,7 @@ export class CursosComponent implements OnInit {
   //test:string[] = ["Calculadora", "Calculo I", "Informatica Teorica", "Sinais e Sistemas", "Deep Learning"];
   searchText:string = "";
   matches:Curso[] = [];
-
+  selectMaterial:string = "";
 
   constructor(private cadastroService: CadastroService) { }
 
@@ -23,11 +23,13 @@ export class CursosComponent implements OnInit {
 
     if(searchText!= ""){
       this.cadastroService.getCursos().then((value) => {
-
+        this.cursos = value;
         searchText = searchText.toLowerCase();
-        this.cadastroService.getCursos().then((value) => (this.cursos = value));
+        //this.cadastroService.getCursos().then((value) => (this.cursos = value));
         this.matches = items.filter(element => {return element.title.toLowerCase().includes(searchText)});
+        
       })
+      
     }
     else{
       this.matches = [];
@@ -40,6 +42,8 @@ export class CursosComponent implements OnInit {
     
   }
   ngOnInit(): void {
+    this.cadastroService.getCursos().then((value)=> this.cursos = value);
+    this.search(this.cursos,this.searchText);
   }
 
 }
