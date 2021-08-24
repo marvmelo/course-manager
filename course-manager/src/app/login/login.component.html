@@ -1,1 +1,27 @@
-<p>login works!</p>
+<h2>
+    Fazer login
+</h2>
+<table>
+    <tr>
+        <td>
+            Email: 
+        </td>
+        <td>
+            <input [(ngModel)]="email" name="emailbox">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Senha: 
+        </td>
+        <td>
+            <input [(ngModel)]="psw" name="passwordbox">
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align: right;">
+            <button (click)="logar(user)" name="accountbutton">Confirmar</button>
+        </td>
+    </tr>
+</table>
