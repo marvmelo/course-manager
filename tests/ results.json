@@ -6,59 +6,414 @@
         "description": "",
         "id": "pesquisar-curso;pesquisa-que-retorna-apenas-um-resultado",
         "keyword": "Scenario",
-        "line": 13,
+        "line": 7,
         "name": "Pesquisa que retorna apenas um resultado",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 14,
+            "line": 8,
             "name": "Os cursos \"Introdução a Computação\", \"Introdução a Programação\", \"Introdução a Algoritmos\" e \"Deep Learning\" estão cadastrados no sistema",
             "match": {
-              "location": "stepdefinitions/search-for-course.js:34"
+              "location": "stepdefinitions/search-for-course.js:35"
             },
             "result": {
               "status": "passed",
-              "duration": 1884000000
+              "duration": 2166000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 15,
+            "line": 9,
             "name": "Eu estou na aba \"Pesquisar Cursos\"",
             "match": {
-              "location": "stepdefinitions/search-for-course.js:51"
+              "location": "stepdefinitions/search-for-course.js:52"
             },
             "result": {
               "status": "passed",
-              "duration": 340000000
+              "duration": 294000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 16,
+            "line": 10,
             "name": "Eu pesquiso por \"Deep Learning\"",
             "match": {
-              "location": "stepdefinitions/search-for-course.js:58"
+              "location": "stepdefinitions/search-for-course.js:59"
             },
             "result": {
               "status": "passed",
-              "duration": 639000000
+              "duration": 361000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 17,
+            "line": 11,
             "name": "Apenas o curso \"Deep Learning\" aparece como resultado",
             "match": {
-              "location": "stepdefinitions/search-for-course.js:69"
+              "location": "stepdefinitions/search-for-course.js:70"
             },
             "result": {
               "status": "passed",
-              "duration": 54000000
+              "duration": 60000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "pesquisar-curso;pesquisa-que-retorna-mais-de-um-resultado",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Pesquisa que retorna mais de um resultado",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "Os cursos \"Introdução a Computação\", \"Introdução a Programação\", \"Introdução a Algoritmos\" e \"Deep Learning\" estão cadastrados no sistema",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2386000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "Eu estou na aba \"Pesquisa\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 272000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "Eu pesquiso por \"Introdução\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 427000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "Os cursos \"Introdução a Computação\", \"Introdução a Programação\" e \"Introdução a Algoritmos\"  aparecem como resultado",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:84"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "pesquisar-curso;pesquisa-que-retorna--nenhum-resultado",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Pesquisa que retorna  nenhum resultado",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "Os cursos \"Basic French\", \"Machine Learning\", \"Neural Networks\" e \"Angular for Beginners\" estão cadastrados no sistema",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2497000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "Eu estou na aba \"Pesquisa\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 392000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "Eu pesquiso por \"Ethical Hacking\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 337000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "Nenhum resultado é encontrado",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:97"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "pesquisar-curso;pesquisa-com-nenhum-curso-cadastrado-no-sistema",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Pesquisa com nenhum curso cadastrado no sistema",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "Não há curso registrado no sistema",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1190000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "Eu estou na aba \"Pesquisa\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 366000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "Eu pesquiso por \"Data Science\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 443000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "Nenhum resultado é encontrado",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:97"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "pesquisar-curso;pesquisa-que-retorna-4-resultados",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Pesquisa que retorna 4 resultados",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "Os cursos \"Calculo I\", \"Calculo II\", \"Calculo III\" e \"Calculo IV\" estão cadastrados no sistema",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1307000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "Eu estou na aba \"Pesquisa\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 415000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "Eu pesquiso por \"Calc\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 404000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "Os cursos \"Calculo I\", \"Calculo II\", \"Calculo III\", \"Calculo IV\"  aparecem como resultado",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:120"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "pesquisar-curso;pesquisa-com-nenhuma-informação-inserida",
+        "keyword": "Scenario",
+        "line": 32,
+        "name": "Pesquisa com nenhuma informação inserida",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "Não há curso registrado no sistema",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1089000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "Eu estou na aba \"Pesquisa\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 397000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "Eu deixo a caixa de pesquisa em branco e faço uma pesquisa",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:111"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 248000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "Nenhum resultado é encontrado",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:97"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39000000
             }
           },
           {
