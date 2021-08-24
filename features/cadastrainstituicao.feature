@@ -9,5 +9,5 @@ Scenario: Cadastro de instituição.
 	When Eu preencho o nome da instituição “UFPP”.
 	And preencho o email da instituição “mail@ufpp.edu”.
 	And preencho o código de cadastro “DF4H6GJ45F47”.
-	Then Eu entro na página “Instituições”
+	Then Eu entro na página “Instituições”.
 	And Eu vejo a UFPP como instituição.
