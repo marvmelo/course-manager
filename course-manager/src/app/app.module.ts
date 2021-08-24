@@ -11,6 +11,7 @@ import { RouterModule }   from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AdMaterialComponent } from './ad-material/ad-material.component';
 import { AvaliarCursoComponent } from './avaliar-curso/avaliar-curso.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { AvaliarCursoComponent } from './avaliar-curso/avaliar-curso.component';
 			component: AvaliarCursoComponent 
 		}
 
-	])
+	]), NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
