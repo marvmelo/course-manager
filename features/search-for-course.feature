@@ -4,11 +4,17 @@ Feature: Pesquisar Curso
 	I want to pesquisar por curso
 	So that eu posso acessá-los
 
+
+	#Scenario: Pesquisa que retorna  nenhum resultado
+		#Given Eu estou na aba "Pesquisa"
+		#And Nenhum Curso está registrado no sistema
+		#When Eu deixo a caixa de pesquisa em branco
+		#Then A página aparece vazia
 	Scenario: Pesquisa que retorna apenas um resultado
 		Given Os cursos "Introdução a Computação", "Introdução a Programação", "Introdução a Algoritmos" e "Deep Learning" estão cadastrados no sistema
-		And Eu estou na aba "Pesquisa"
+		And Eu estou na aba "Pesquisar Cursos"
 		When Eu pesquiso por "Deep Learning"
-		Then O curso "Deep Learning" aparece para ser selecionado
+		Then Apenas o curso "Deep Learning" aparece como resultado
 	#Scenario: Pesquisa que retorna mais de um resultado
 		#Given Eu estou na aba "Pesquisa"
 		#And Os cursos "Introdução a Computação", "Introdução a Programação", "Introdução a Algoritmos" e "Deep Learning" estão cadastrados no sistema
@@ -33,7 +39,7 @@ Feature: Pesquisar Curso
 		#Given Eu estou na aba "Pesquisa"
 		#And Nenhum Curso está registrado no sistena
 		#When Eu deixo a caixa de pesquisa em branco
-		#Then A página aparec vazia
+		#Then A página aparece vazia
 
 
 

@@ -9,10 +9,8 @@ var expect = chai.expect;
 
 
 
-function createCourses(courses) {
-
-    for(i = 0; i< courses.length; i++){
-        await $("input[name = 'titleBox']").sendKeys(courses[i]);
-        await element(by.name('addButton')).click();
-    }
+async function createCourses(courses){
+    await $("input[name = 'titleBox']").sendKeys(courses);
+    await element(by.name('addButton')).click();
+    
 }

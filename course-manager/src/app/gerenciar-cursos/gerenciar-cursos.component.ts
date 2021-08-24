@@ -30,7 +30,7 @@ export class GerenciarCursosComponent implements OnInit {
       else{
         newCurso.id = this.cursos[this.cursos.length -1].id +1;
       }
-      this.cadastroService.sendNewCurso(newCurso).then((value) => {alert("Curso Criado"); this.curso.clear(); this.fillCursos();});
+      this.cadastroService.sendNewCurso(newCurso).then((value) => { this.curso.clear(); this.fillCursos();});
    }
   }
 
