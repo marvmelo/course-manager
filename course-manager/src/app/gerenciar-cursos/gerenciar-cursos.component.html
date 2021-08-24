@@ -1,30 +1,39 @@
-<html>
+<html (mousemove) = "onMove()">
 <h2>Gerenciar Cursos</h2>
 <table>
     <tr>
         <td><label>Título</label></td>
         <td><input [(ngModel)] = "curso.title" name = "titleBox"></td>
         <td style = "text-align:right;"> <button (click) =  "createCurso(curso)" name="addButton">Adicionar</button></td>
+        <td name = "messageTxt">{{message}}</td>
     </tr>
     <tr>
-        <td><label>Videos</label></td>
-        <td><input  [(ngModel)] = "curso.content"></td>
+      
     </tr>
-    <tr>
-        <td><label>Apostila</label></td>
-        <td><button>Upload</button></td>
-    </tr>
+   
+
 </table>
 
 
 <table>
     <tr>
         <td>Cursos</td>
+        <td>Materiais</td>
     </tr>
     <tr *ngFor = "let c of cursos">
         <td>{{c.title}}</td>
-        <td><button>Baixar Apostila</button></td>
-        <td><button>Assistir Vídeos</button></td>
+
+
+      <td>
+            <select [(ngModel)]="selectMaterial">
+                <option *ngFor="let m of c.content" [value]="m[2]">
+                  {{m[0]}}
+                </option>
+            </select>
+        </td>
+    <td> <button name = "goButton"><a href = "{{selectMaterial}}" a target=”_blank”>Ir</a></button> </td>
+
     </tr>
+
 </table>
 </html>
