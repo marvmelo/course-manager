@@ -58,8 +58,6 @@ app.post("/login", function (req, res) {
 app.post("/adMaterial", function (req, res) {
 
     var newMaterial = new material.Material();
-
-
    
     newMaterial.set_material_data(req.body.nome, req.body.tipo, req.body.link);
     if (materialDict.has(newMaterial.link)) {
@@ -70,8 +68,6 @@ app.post("/adMaterial", function (req, res) {
         res.status(200).send("Done");
     }
     console.log(materialDict); // É como um print
-
-
 
     })
 

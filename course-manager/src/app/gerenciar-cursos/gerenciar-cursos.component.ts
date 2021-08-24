@@ -38,8 +38,8 @@ export class GerenciarCursosComponent implements OnInit {
         //newCurso.addMaterial(['stack', "site","https://stackoverflow.com/"]);
        // newCurso.addMaterial([]);
       }
-      this.cadastroService.sendNewCurso(newCurso).then((value) => { this.message = "Curso Cadastrado"; this.curso.clear(); this.fillCursos();},
-                                                       (value) => {if(value.error == "Existing Course"){this.message = "Curso Existente" };});
+      this.cadastroService.sendNewCurso(newCurso).then((value) => { this.message = ""; this.curso.clear(); this.fillCursos();},
+                                                       (value) => {if(value.error == "Existing Course"){this.message = "" };});
    }
   }
 
