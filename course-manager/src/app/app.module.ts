@@ -7,7 +7,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { GerenciarCursosComponent } from './gerenciar-cursos/gerenciar-cursos.component';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterModule }   from '@angular/router';
+import { RouterModule }   from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AdMaterialComponent } from './ad-material/ad-material.component';
 
@@ -25,7 +25,6 @@ import { AdMaterialComponent } from './ad-material/ad-material.component';
     HttpClientModule, // Isso permite enviar http para o servidor
     AppRoutingModule,
     FormsModule, // Isso permite que html se comunique com o Typescript
-	Router,
 	RouterModule.forRoot([
 		{
 			path: 'cadastro',
