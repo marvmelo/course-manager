@@ -95,4 +95,9 @@ app.get('/cursos',function(req,res){
     })
 
 
-
+app.delete('/cursos/:id', function(req,res){
+    console.log(req.params.id);
+    newCursos = cursos.filter( value => value.id!=req.params.id);
+    cursos = newCursos;
+    res.status(200).send("Course Deleted");
+});

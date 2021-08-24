@@ -24,4 +24,10 @@ export class Material {
         this.link = link;
     }
 
+    materialToArray() : string[] {
+
+        return [this.nome,this.tipo,this.link];
+
+    }
+
 }

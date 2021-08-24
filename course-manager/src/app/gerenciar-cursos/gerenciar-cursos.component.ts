@@ -17,7 +17,7 @@ export class GerenciarCursosComponent implements OnInit {
   selectMaterial:string = "";
   link:string = "";
   material:Material = new Material();
-
+  sortedCourses:Curso[] = [];
 
   
   createCurso(newCurso:Curso) :void{
@@ -32,9 +32,10 @@ export class GerenciarCursosComponent implements OnInit {
           newCurso.id = 0;
       }
       else{
-        newCurso.id = this.cursos[this.cursos.length -1].id +1;
+        this.sortedCourses = this.cursos.sort((a,b) => (a.id > b.id) ? 1 :-1);
+        newCurso.id = this.sortedCourses[this.sortedCourses.length -1].id +1;
         //newCurso.addMaterial(['Google', "site","https://www.google.com/"]);
-        //newCurso.addMaterial(['stack', "site","https://www.youtube.com/"]);
+        //newCurso.addMaterial(['stack', "site","https://stackoverflow.com/"]);
        // newCurso.addMaterial([]);
       }
       this.cadastroService.sendNewCurso(newCurso).then((value) => { this.message = "Curso Cadastrado"; this.curso.clear(); this.fillCursos();},
@@ -42,13 +43,19 @@ export class GerenciarCursosComponent implements OnInit {
    }
   }
 
+deleteCurso(id:number) :void{
+
+  this.cadastroService.deleteCurso(id).then((value) => {this.fillCursos()});
+
+
+}
 fillCursos() : void{
 
   this.cadastroService.getCursos().then((value:Curso[]) => {this.cursos = value});
 }
 
 onMove() : void{
-  this.message = ""
+  this.message = "";
 }
 
 
