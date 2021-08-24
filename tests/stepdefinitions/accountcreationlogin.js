@@ -22,11 +22,17 @@ Given('eu estou na página {string}', async function (pagina) {
 });
 
 Given('não há conta com nome, email e senha {string}, {string} e {string}', function (string, string2, string3) {
-
+  request.delete("localhost:3000/createAccount")
 });
 
-Given('há conta com nome, email e senha {string}, {string} e {string}', function (string, string2, string3) {
-
+Given('há conta com nome, email e senha {string}, {string} e {string}', function (nome, email, senha) {
+  request.delete("localhost:3000/createAccount")
+  request.post("localhost:3000/createAccount", form(
+    {
+      'content-type' : 'application/json',
+      body: {'nome': nome, 'email': email, 'hashedpsw': senha} 
+    }
+  ));
 });
 
 When('eu insiro as informações de email e senha {string} e {string}', async function(email, senha){
