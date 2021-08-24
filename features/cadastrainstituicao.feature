@@ -6,8 +6,8 @@ Scenario: Nova Instituição
 	Then Eu entro na página “Cadastro de Instituições”.
 Scenario: Cadastro de instituição.
 	Given Eu estou na página “Cadastro de Instituição”
-	When Eu preencho o nome da instituição “UFPP”.
-	And preencho o email da instituição “mail@ufpp.edu”.
+	When Eu preencho o nome da instituição “UFPe”.
+	And preencho o email da instituição “mail@ufpe.edu”.
 	And preencho o código de cadastro “DF4H6GJ45F47”.
 	Then Eu entro na página “Instituições”.
-	And Eu vejo a UFPP como instituição.
+	And Eu vejo a UFPe como instituição.
