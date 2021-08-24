@@ -26,6 +26,10 @@ export class LoginComponent implements OnInit {
     );
   }
 
+  private failureConfirmation(): void {
+    window.alert("Informações Incorretas");
+  }
+
   ngOnInit(): void {
   }
 
