@@ -17,7 +17,7 @@ export class GerenciarCursosComponent implements OnInit {
   selectMaterial:string = "";
   link:string = "";
   material:Material = new Material();
-
+  sortedCourses:Curso[] = [];
 
   
   createCurso(newCurso:Curso) :void{
@@ -32,7 +32,8 @@ export class GerenciarCursosComponent implements OnInit {
           newCurso.id = 0;
       }
       else{
-        newCurso.id = this.cursos[this.cursos.length -1].id +1;
+        this.sortedCourses = this.cursos.sort((a,b) => (a.id > b.id) ? 1 :-1);
+        newCurso.id = this.sortedCourses[this.sortedCourses.length -1].id +1;
         //newCurso.addMaterial(['Google', "site","https://www.google.com/"]);
         //newCurso.addMaterial(['stack', "site","https://stackoverflow.com/"]);
        // newCurso.addMaterial([]);
@@ -54,7 +55,7 @@ fillCursos() : void{
 }
 
 onMove() : void{
-  this.message = ""
+  this.message = "";
 }
 
 

@@ -35,7 +35,7 @@ export class CadastroService {
   }
 
   deleteCurso(id:number) :Promise<string> {
-    alert("Here");
+    //alert("Here");
     return this.http.delete<string>(this.serverUrl + "cursos"  + "/"  + id,  {responseType: 'text' as 'json' , observe: 'body'}).toPromise();
 
   }
