@@ -1,13 +1,18 @@
+//import Material from './material';
+
+
 exports.Curso = class{
 
     id;
     title;
-    content;
+    content = [];
+    
 
     constructor(){
         this.id = 0;
         this.title = "";
-        this.content = "";
+        this.content = [];
+    
     }
 
     copy() {
@@ -15,6 +20,7 @@ exports.Curso = class{
         newCurso.id = this.id;
         newCurso.title = this.title;
         newCurso.content = this.content;
+        newCurso.materiais = this.materiais;
         return newCurso;
     }
     set(id, title, content) {

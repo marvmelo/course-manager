@@ -1,13 +1,21 @@
+import { Material } from '../course-manager/src/app/material';
+
+
+
+
+
 export class Curso{
 
     id: number;
     title:string;
-    content:string;
+    content:String[][];
+    materials:string[] =[]
 
     constructor(){
         this.id = 0;
         this.title = "";
-        this.content = "";
+        this.content = [];
+        this.materials = [];
     }
 
     copy(): Curso {
@@ -17,15 +25,25 @@ export class Curso{
         newCurso.content = this.content;
         return newCurso;
     }
-    set(id:number, title: string, content:string): void{
+    set(id:number, title: string, content:String[][]): void{
         this.id = id;
         this.title = title;
         this.content = content;
+        //this.materials = materials;
     }
 
+    addMaterial(material:String[]) : void{
+        this.content.push(material);
+    }
+
+    //materialToArray(material:Material): string[]{
+      //  return [material.nome,material.tipo,material.link];
+    //}
+
     clear() :void{
-        this.id =  0;
+        this.id =  -1;
         this.title = "";
-        this.content = "";
+        this.content = [];
+        //this.materials = [[]];
     }
 }
