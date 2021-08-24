@@ -1,14 +1,14 @@
 <html>
     <table>
         <tr>
-            <td><input [(ngModel)] = "searchText"></td>
-            <td><button (click) = "search(cursos,searchText)">Pesquisar</button></td>
+            <td><input [(ngModel)] = "searchText" name = "searchBox"></td>
+            <td><button (click) = "search(cursos,searchText)" name = "searchButton">Pesquisar</button></td>
         </tr>
     </table>
 
     <table>
-        <tr *ngFor = "let m of matches">
-            <td>{{m.title}}</td>
+        <tr *ngFor = "let m of matches" name = "matcheslist">
+            <td name = "titlelist" >{{m.title}}</td>
         </tr>
     </table>
 </html>
