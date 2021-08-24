@@ -1,0 +1,39 @@
+<html (mousemove) = "onMove()">
+<h2>Gerenciar Cursos</h2>
+<table>
+    <tr>
+        <td><label>Título</label></td>
+        <td><input [(ngModel)] = "curso.title" name = "titleBox"></td>
+        <td style = "text-align:right;"> <button (click) =  "createCurso(curso)" name="addButton">Adicionar</button></td>
+        <td name = "messageTxt">{{message}}</td>
+    </tr>
+    <tr>
+      
+    </tr>
+   
+
+</table>
+
+
+<table>
+    <tr *ngIf = "cursos.length != 0">
+        <th>Cursos</th>
+        <th>Materiais</th>
+    </tr>
+    <tr *ngFor = "let c of cursos">
+        <td>{{c.title}}</td>
+
+
+      <td>
+            <select [(ngModel)]="selectMaterial">
+                <option *ngFor="let m of c.content" [value]="m[2]">
+                  {{m[0]}}
+                </option>
+            </select>
+        </td>
+    <td> <button name = "goButton"><a href = "{{selectMaterial}}" a target=”_blank”>Ir</a></button> </td>
+    <td><button (click) = "deleteCurso(c.id)" name = "removeButton">Remover Curso</button></td>
+    </tr>
+
+</table>
+</html>
