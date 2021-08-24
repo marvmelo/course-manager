@@ -17,8 +17,8 @@
 
 <table>
     <tr>
-        <td>Cursos</td>
-        <td>Materiais</td>
+        <th>Cursos</th>
+        <th>Materiais</th>
     </tr>
     <tr *ngFor = "let c of cursos">
         <td>{{c.title}}</td>
@@ -32,7 +32,7 @@
             </select>
         </td>
     <td> <button name = "goButton"><a href = "{{selectMaterial}}" a target=”_blank”>Ir</a></button> </td>
-
+    <td><button (click) = "deleteCurso(c.id)" name = "removeButton">Remover Curso</button></td>
     </tr>
 
 </table>

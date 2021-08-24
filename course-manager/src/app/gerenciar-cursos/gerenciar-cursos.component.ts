@@ -34,7 +34,7 @@ export class GerenciarCursosComponent implements OnInit {
       else{
         newCurso.id = this.cursos[this.cursos.length -1].id +1;
         //newCurso.addMaterial(['Google', "site","https://www.google.com/"]);
-        //newCurso.addMaterial(['stack', "site","https://www.youtube.com/"]);
+        //newCurso.addMaterial(['stack', "site","https://stackoverflow.com/"]);
        // newCurso.addMaterial([]);
       }
       this.cadastroService.sendNewCurso(newCurso).then((value) => { this.message = "Curso Cadastrado"; this.curso.clear(); this.fillCursos();},
@@ -42,6 +42,12 @@ export class GerenciarCursosComponent implements OnInit {
    }
   }
 
+deleteCurso(id:number) :void{
+
+  this.cadastroService.deleteCurso(id).then((value) => {this.fillCursos()});
+
+
+}
 fillCursos() : void{
 
   this.cadastroService.getCursos().then((value:Curso[]) => {this.cursos = value});
