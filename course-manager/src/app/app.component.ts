@@ -9,8 +9,15 @@ import { User } from './user';
 export class AppComponent {
   title = 'course-manager';
   logado: boolean = false;
+  login: boolean = false;
 
-  logar(user: User): void{
+  mostrarlogin(): void{
+    this.login = true;
+  }
+
+  logar(): void{
+    console.log("Rodando")
     this.logado = true;
+    this.login = false;
   }
 }

@@ -1,11 +1,11 @@
 <html >
+<app-login *ngIf="(!logado);" (logarEvent)="logar()"></app-login>
 <header>
 	<h1>
 	  Course Manager
 	</h1>
 	<nav *ngIf="(!logado);">
 		<a routerLink="/cadastro" name = "cadLink">Criar Conta</a>
-		<a routerLink="/login" name = "loginlink">Acessar Conta</a>
 	</nav>
 	<nav *ngIf="(logado);">
 		<a routerLink="/cursos" name = "cursosLink">Pesquisar Cursos</a>
@@ -14,5 +14,4 @@
 	</nav>
 </header>
 <router-outlet></router-outlet>
-<app-login style="display: none;" (logarEvent)="logar($event)"></app-login>
 </html>

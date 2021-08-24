@@ -40,12 +40,13 @@ app.post("/createAccount", function (req, res) {
 
 app.post("/login", function (req, res) {
     var newUser = new user.User();
+    console.log(req.body);
     newUser.set_user_data(req.body.nome, req.body.email, req.body.hashedpsw);
-    if (userDict.has(newUser.email) && userDict[newUser.email].hashedpsw==newUser.hashedpsw) {
-        res.status(200).send(userDict[newUser.email]);
+    if (userDict.has(newUser.email) && userDict.get(newUser.email).hashedpsw==newUser.hashedpsw) {
+        res.status(200).send("Confirmado");
     }
     else {
-        res.status(400).send("Done");
+        res.status(400).send("Inexistente");
     }
     console.log(userDict); // É como um print
 })

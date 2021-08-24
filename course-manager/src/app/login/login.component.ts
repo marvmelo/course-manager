@@ -16,14 +16,14 @@ export class LoginComponent implements OnInit {
   email: string = "";
   psw: string = "";
   user: User = new User();
-  @Output() logarEvent = new EventEmitter<User>();
+  @Output() logarEvent = new EventEmitter();
 
   logar(fUser: User): void {
     fUser.set_user_data(this.name, this.email, this.psw);
     this.loginService.confirmUser(fUser)
     .then(
-      (value) => {this.userConfirmed(fUser);},
-      (value) => {this.failureConfirmation();}
+      (value) => {this.userConfirmed(); console.log(value);},
+      (value) => {this.failureConfirmation(); console.log(value)}
     );
   }
 
@@ -31,8 +31,8 @@ export class LoginComponent implements OnInit {
     window.alert("Informações Incorretas");
   }
 
-  private userConfirmed(fUser: User): void {
-    this.logarEvent.emit(fUser);
+  private userConfirmed(): void {
+    this.logarEvent.emit();
   }
 
   ngOnInit(): void {
