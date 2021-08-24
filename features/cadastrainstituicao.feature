@@ -1,5 +1,5 @@
 Scenario: Nova Instituição
-	Given Eu estou na página de Instituição
+	Given Eu estou na página de Instituição.
 	And Vejo as instituições “ABRA Cursos”, “UFPE”, “Vitória Gran Cursos”
 	And Vejo a opção de cadastrar instituição.
 	When Eu seleciono para cadastrar nova instituição.
@@ -11,3 +11,10 @@ Scenario: Cadastro de instituição.
 	And preencho o código de cadastro “DF4H6GJ45F47”.
 	Then Eu entro na página “Instituições”.
 	And Eu vejo a UFPe como instituição.
+Scenario: Cadastro de X.
+	Given Eu estou na página “CadastrodeInstituição”
+	When Eu preencho o nome da instituição “UFXX”.
+	And preencho o email da instituição “XXXXXX@ufpp.edu”.
+	And preencho o código de cadastro “XXXXXXXX”.
+	Then Eu entro na página “Instituições”.
+	And Eu vejo a UFPP como instituição.
