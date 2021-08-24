@@ -44,6 +44,7 @@ app.post("/createAccount", function (req, res) {
 // Essa segunda função que processa a requisição e manda uma resposta
 app.post("/adMaterial", function (req, res) {
     var newMaterial = new user.Material();
+   
     newMaterial.set_material_data(req.body.nome, req.body.tipo, req.body.link);
     if (materialDict.has(newUser.link)) {
         res.status(400).send("Existing Material");
@@ -52,20 +53,31 @@ app.post("/adMaterial", function (req, res) {
         materialDict.set(newMaterial.link, newMaterial);
         res.status(200).send("Done");
     }
-    console.log(userMaterial); // É como um print
+    //console.log(userMaterial); // É como um print
 
     })
 
 
 app.post('/cursos', function(req,res){
-
+    
     var newCurso = new curso.Curso();
-    newCurso.set(req.body.id,req.body.title,req.body.content);
-    res.status(200).send("Done");
-    cursos.push(newCurso);
-    console.log(cursos);
+    console.log(req.body);
 
-    })
+
+    newCurso.set(req.body.id,req.body.title,req.body.content);
+    let titles = cursos.filter(value => value.title == newCurso.title);
+
+    if(titles.length == 0){
+        cursos.push(newCurso);
+        res.status(200).send("Done");
+        //console.log(cursos);
+    }
+    
+    else{
+        res.status(400).send("Existing Course");
+        console.log("Existing Course");
+    }
+})
 
 app.get('/cursos',function(req,res){
     res.send(JSON.stringify(cursos));
