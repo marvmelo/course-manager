@@ -8,12 +8,14 @@ import { CursosComponent } from './cursos/cursos.component';
 import { GerenciarCursosComponent } from './gerenciar-cursos/gerenciar-cursos.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule }   from '@angular/router';
+import { LoginComponent } from './login/login.component';
 import { AdMaterialComponent } from './ad-material/ad-material.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroComponent,
+    LoginComponent,
 	GerenciarCursosComponent,
 	CursosComponent,
  	AdMaterialComponent 
