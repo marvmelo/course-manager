@@ -1,5 +1,6 @@
 const { Given, When,Then } = require("@cucumber/cucumber")
 const { browser, $, element, ExpectedConditions } = require("protractor")
+const { request } = require("request")
 var chai = require("chai");
 var chaiAsPromised = require("chai-as-promised");
 
