@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule }   from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AdMaterialComponent } from './ad-material/ad-material.component';
+import { AvaliarCursoComponent } from './avaliar-curso/avaliar-curso.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AdMaterialComponent } from './ad-material/ad-material.component';
     LoginComponent,
 	GerenciarCursosComponent,
 	CursosComponent,
- 	AdMaterialComponent 
+ 	AdMaterialComponent,
+    AvaliarCursoComponent 
   	],
   imports: [
     BrowserModule,
@@ -42,7 +44,12 @@ import { AdMaterialComponent } from './ad-material/ad-material.component';
 		{
 			path: 'adicionar-material',
 			component: AdMaterialComponent
+		},
+		{
+			path: 'avaliar-curso',
+			component: AvaliarCursoComponent 
 		}
+
 	])
   ],
   providers: [],
