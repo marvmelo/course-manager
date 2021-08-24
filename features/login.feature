@@ -6,21 +6,24 @@ Feature: Logar
 
     Scenario: Fazer login
         Given eu estou deslogado
-        And eu estou na página "Fazer login"
-        And Há uma conta com o email "barbie100@hotmail.com" e senha "CorrectHorseBatteryStaple" e nome "Barbara"
-        When eu insiro as informações de email e senha, respectivamente "barbie100@hotmail.com" e "CorrectHorseBatteryStaple"
+        And há conta com nome, email e senha "Barbara", "barbie100@hotmail.com" e "CorrectHorseBatteryStaple" 
+        When eu vou para página "Fazer login"
+        Then eu estou na página "Fazer login"
+        When eu insiro as informações de email e senha "barbie100@hotmail.com" e "CorrectHorseBatteryStaple"
         And eu aperto em "Acessar Conta"
         Then eu estou na página "Main"
     Scenario: Fazer login com senha errada
         Given eu estou deslogado
-        And eu estou na página "Fazer login"
-        And Há uma conta com o email "barbie100@hotmail.com" e senha "CorrectHorseBatteryStaple" e nome "Barbara"
-        When eu insiro as informações de email e senha, respectivamente "barbie100@hotmail.com" e "Trovador"
+        And há conta com nome, email e senha "Barbara", "barbie100@hotmail.com" e "CorrectHorseBatteryStaple"
+        When eu vou para página "Fazer login"
+        Then eu estou na página "Fazer login"
+        When eu insiro as informações de email e senha "barbie100@hotmail.com" e "Trovador"
         And eu aperto em "Acessar Conta"
         Then eu vejo a mensagem "Informações Incorretas"
     Scenario: Fazer login sem informar dados
         Given eu estou deslogado
-        And eu estou na página "Fazer login"
-        And Os campos nome e senha estão vazios
-        When eu aperto em "Acessar Conta"
+        When eu vou para página "Fazer login"
+        Then eu estou na página "Fazer login"
+        When eu insiro as informações de email e senha "" e ""
+        And eu aperto em "Acessar Conta"
         Then eu vejo a mensagem "Informações Incorretas"
