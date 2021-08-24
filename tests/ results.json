@@ -15,11 +15,11 @@
             "line": 14,
             "name": "Os cursos \"Introdução a Computação\", \"Introdução a Programação\", \"Introdução a Algoritmos\" e \"Deep Learning\" estão cadastrados no sistema",
             "match": {
-              "location": "stepdefinitions/search-for-course.js:15"
+              "location": "stepdefinitions/search-for-course.js:34"
             },
             "result": {
               "status": "passed",
-              "duration": 1730000000
+              "duration": 1884000000
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 15,
             "name": "Eu estou na aba \"Pesquisar Cursos\"",
             "match": {
-              "location": "stepdefinitions/search-for-course.js:34"
+              "location": "stepdefinitions/search-for-course.js:51"
             },
             "result": {
               "status": "passed",
-              "duration": 312000000
+              "duration": 340000000
             }
           },
           {
@@ -41,11 +41,11 @@
             "line": 16,
             "name": "Eu pesquiso por \"Deep Learning\"",
             "match": {
-              "location": "stepdefinitions/search-for-course.js:41"
+              "location": "stepdefinitions/search-for-course.js:58"
             },
             "result": {
               "status": "passed",
-              "duration": 577000000
+              "duration": 639000000
             }
           },
           {
@@ -54,11 +54,11 @@
             "line": 17,
             "name": "Apenas o curso \"Deep Learning\" aparece como resultado",
             "match": {
-              "location": "stepdefinitions/search-for-course.js:52"
+              "location": "stepdefinitions/search-for-course.js:69"
             },
             "result": {
               "status": "passed",
-              "duration": 23000000
+              "duration": 54000000
             }
           },
           {

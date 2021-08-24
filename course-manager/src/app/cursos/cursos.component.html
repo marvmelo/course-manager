@@ -1,14 +1,31 @@
 <html>
     <table>
+        
         <tr>
             <td><input [(ngModel)] = "searchText" name = "searchBox"></td>
-            <td><button (click) = "search(cursos,searchText)" name = "searchButton">Pesquisar</button></td>
+            <td><button (click) = "search(cursos,searchText)" (click) = "search(cursos,searchText)" name = "searchButton">Pesquisar</button></td>
         </tr>
     </table>
 
     <table>
+        <tr *ngIf = "matches.length !=0">
+            <th>Cursos</th>
+            <th>Materiais</th>
+        </tr>
         <tr *ngFor = "let m of matches" name = "matcheslist">
             <td name = "titlelist" >{{m.title}}</td>
+
+            <td>
+                <select [(ngModel)]="selectMaterial">
+                    <option *ngFor="let p of m.content" [value]="p[2]">
+                      {{p[0]}}
+                    </option>
+                </select>
+            </td>
+        <td> <button name = "goButton"><a href = "{{selectMaterial}}" a target=”_blank”>Ir</a></button> </td>
+     
+
+
         </tr>
     </table>
 </html>
