@@ -25,3 +25,7 @@ nav a:hover{
 	color: #000000;
 	background-color: #F0E68C;
 }
+ngb-rating {
+    color: #FFC107;
+    font-size: 80px;
+}

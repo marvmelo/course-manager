@@ -20,4 +20,6 @@ export class AppComponent {
     this.logado = true;
     this.login = false;
   }
+
+  starRating = 0;
 }
