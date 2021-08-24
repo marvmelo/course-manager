@@ -2,6 +2,7 @@
   "dependencies": {
     "cucumber-html-reporter": "^5.4.0",
     "protractor": "^7.0.0",
+    "request": "^2.88.2",
     "ts-node": "^10.2.0"
   },
   "devDependencies": {
