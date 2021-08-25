@@ -1,0 +1,1282 @@
+[
+  {
+    "description": "    As a usuário\n    I want to criar uma conta\n    So that eu possa usar os recursos da aplicação",
+    "elements": [
+      {
+        "description": "",
+        "id": "criar-cadastro;criar-cadastro-bem-sucedido",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Criar cadastro bem sucedido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 724000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "eu estou na página \"Criar cadastro\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 264000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "não há conta com nome, email e senha \"Barbara\", \"CorrectHorseBatteryStaple\" e \"barbie100@hotmail.com\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "eu insiro as informações de nome, email e senha \"Barbara\", \"barbie100@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1209000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "eu aperto em \"Criar conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 170000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "eu vejo uma mensagem \"Conta Criada!\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1063000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "criar-cadastro;criar-cadastro-com-email-já-existente",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Criar cadastro com email já existente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 242000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "eu estou na página \"Criar cadastro\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 267000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "há conta com nome, email e senha \"Barb\", \"barbie100@hotmail.com\", \"psw\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "eu insiro as informações de nome, email e senha \"Barbara\", \"barbie100@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1189000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "eu aperto em \"Criar conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 176000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "eu vejo uma mensagem \"Email já existente!\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1039000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "criar-cadastro;tentar-criar-cadastro-sem-informar-dados",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Tentar criar cadastro sem informar dados",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "eu estou na página \"Criar cadastro\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 137000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "eu insiro as informações de nome, email e senha \"\", \"\" e \"\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1121000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "eu aperto em \"Criar conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "eu vejo uma mensagem \"Formulário Incompleto!\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1051000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "criar-cadastro;criar-cadastro-com-senha-já-existente",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Criar cadastro com senha já existente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "eu estou na página \"Criar cadastro\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 143000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "há conta com nome, email e senha \"Barb\", \"barbie100@hotmail.com\", \"CorrectHorseBatteryStaple\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "eu insiro as informações de nome, email e senha \"Julio\", \"kaiser@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1157000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "eu aperto em \"Criar conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "eu vejo uma mensagem \"Conta Criada!\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1046000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "criar-cadastro",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Criar Cadastro",
+    "tags": [],
+    "uri": "../features/accountcreation.feature"
+  },
+  {
+    "description": "\tAs a Usuário da plataforma\n\tI want to pesquisar por curso\n\tSo that eu posso acessá-los",
+    "elements": [
+      {
+        "description": "",
+        "id": "pesquisar-curso;pesquisa-que-retorna-apenas-um-resultado",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Pesquisa que retorna apenas um resultado",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "Os cursos \"Introdução a Computação\", \"Introdução a Programação\", \"Introdução a Algoritmos\" e \"Deep Learning\" estão cadastrados no sistema",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1406000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Eu estou na aba \"Pesquisar Cursos\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Eu pesquiso por \"Deep Learning\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 453000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Apenas o curso \"Deep Learning\" aparece como resultado",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "pesquisar-curso;pesquisa-que-retorna-mais-de-um-resultado",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Pesquisa que retorna mais de um resultado",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "Os cursos \"Introdução a Computação\", \"Introdução a Programação\", \"Introdução a Algoritmos\" e \"Deep Learning\" estão cadastrados no sistema",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2267000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "Eu estou na aba \"Pesquisa\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "Eu pesquiso por \"Introdução\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 533000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "Os cursos \"Introdução a Computação\", \"Introdução a Programação\" e \"Introdução a Algoritmos\"  aparecem como resultado",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "pesquisar-curso;pesquisa-que-retorna--nenhum-resultado",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Pesquisa que retorna  nenhum resultado",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "Os cursos \"Basic French\", \"Machine Learning\", \"Neural Networks\" e \"Angular for Beginners\" estão cadastrados no sistema",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2396000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "Eu estou na aba \"Pesquisa\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "Eu pesquiso por \"Ethical Hacking\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 547000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "Nenhum resultado é encontrado",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "pesquisar-curso;pesquisa-com-nenhum-curso-cadastrado-no-sistema",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Pesquisa com nenhum curso cadastrado no sistema",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "Não há curso registrado no sistema",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:110"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1065000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "Eu estou na aba \"Pesquisa\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "Eu pesquiso por \"Data Science\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 436000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "Nenhum resultado é encontrado",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "pesquisar-curso;pesquisa-que-retorna-4-resultados",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Pesquisa que retorna 4 resultados",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "Os cursos \"Calculo I\", \"Calculo II\", \"Calculo III\" e \"Calculo IV\" estão cadastrados no sistema",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1279000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "Eu estou na aba \"Pesquisa\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "Eu pesquiso por \"Calc\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 457000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "Os cursos \"Calculo I\", \"Calculo II\", \"Calculo III\", \"Calculo IV\"  aparecem como resultado",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:128"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "pesquisar-curso;pesquisa-com-nenhuma-informação-inserida",
+        "keyword": "Scenario",
+        "line": 32,
+        "name": "Pesquisa com nenhuma informação inserida",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "Não há curso registrado no sistema",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:110"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1097000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "Eu estou na aba \"Pesquisa\"",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "Eu deixo a caixa de pesquisa em branco e faço uma pesquisa",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:119"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 357000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "Nenhum resultado é encontrado",
+            "match": {
+              "location": "stepdefinitions/search-for-course.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "pesquisar-curso",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Pesquisar Curso",
+    "tags": [],
+    "uri": "../features/search-for-course.feature"
+  },
+  {
+    "description": "\tComo usuário da plataforma\n\tDesejo adicionar material",
+    "elements": [
+      {
+        "description": "",
+        "id": "adicionar-curso;adicionar-material-sem-nenhum-ter-nenhum-curso-cadastrado",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Adicionar material sem nenhum ter nenhum curso cadastrado",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "Eu estou na página de Adicionar Material",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 146000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "Nenhum curso foi cadastrado",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Eu adiciono o material com o nome: \"Cálculo 3.1\", o tipo: \"Documento\" e o link: \"https://youtube.com/CalculoTristeza.com\"",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Eu confirmo",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 133000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "Aparecerá uma janela com o seguinte aviso: \"Formulário Incompleto!\"",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1033000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "adicionar-curso;adicionar-material-com-curso-cadastrado",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Adicionar material com curso cadastrado",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "O curso \"Testando\" foi selecionado na parte SelectCurso",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 386000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "Eu estou na página de Adicionar Material",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "Eu adiciono o material com o nome: \"Cálculo 3\", o tipo: \"Vídeo\" e o link: \"https://youtube.com/CalculodaTristeza.com\"",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 87000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "Eu confirmo",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 98000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "Aparecerá uma janela com o seguinte aviso: \"Arquivo adicionado!\"",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1045000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "adicionar-curso;tentar-adicionar-material-sem-todos-os-campos-estarem-preenchidos",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Tentar adicionar material sem todos os campos estarem preenchidos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "Um curso foi selecionado na parte SelectCurso",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "Eu estou na página de Adicionar Material",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 167000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "Eu deixo um campo não preenchido e coloco apenas nome: \"Cálculo 3\" e link: \"https://youtube.com/CalculodaTristeza.com\"",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 70000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "Eu confirmo",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 158000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "Aparecerá uma janela com o seguinte aviso: \"Formulário Incompleto!\"",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1032000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "adicionar-curso;adicionar-material-já-existente",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Adicionar material já existente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "Um curso foi selecionado na parte SelectCurso",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 28,
+            "name": "Eu estou na página de Adicionar Material",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 160000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "O material com o nome: \"Cálculo 3\", o tipo: \"Vídeo\" e o link: \"https://youtube.com/CalculodaTristeza.com\" já estão cadastrados no sistema",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "Eu adiciono o material com o nome: \"Cálculo 3\", o tipo: \"Vídeo\" e o link: \"https://youtube.com/CalculodaTristeza.com\"",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 118000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "Eu confirmo",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "Aparecerá uma janela com o seguinte aviso: \"Material já existente!\"",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1038000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "adicionar-curso;adicionar-material-com-o-campo-link-diferente",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "Adicionar material com o campo link diferente",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 35,
+            "name": "Um curso foi selecionado na parte SelectCurso",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 36,
+            "name": "Eu estou na página de Adicionar Material",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 150000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "O material com o nome: \"Cálculo 3\", o tipo: \"Vídeo\" e o link: \"https://youtube.com/CalculodaTristeza.com\" já estão cadastrados no sistema",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "Eu adiciono o material com o nome: \"Cálculo 3\", o tipo: \"Vídeo\" e o link: \"https://youtube.com/CalculoDaTristeza.com\"",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "Eu confirmo",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 40,
+            "name": "Aparecerá uma janela com o seguinte aviso: \"Arquivo adicionado!\"",
+            "match": {
+              "location": "stepdefinitions/admaterial.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1033000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "adicionar-curso",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Adicionar Curso",
+    "tags": [],
+    "uri": "../features/ad-Material.feature"
+  }
+]
