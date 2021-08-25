@@ -41,7 +41,7 @@ export class CadastroService {
   }
 
   putCurso(curso:Curso): Promise<string> {
-    alert("putCurso");
+    //alert("putCurso");
     return this.http.put<string>(this.serverUrl + "cursos", curso,  {responseType: 'text' as 'json' , observe: 'body'}).toPromise();
   }
 

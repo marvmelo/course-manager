@@ -115,7 +115,7 @@ app.delete('/cursos/:id', function(req,res){
 app.put('/cursos', function(req,res){
    
     newCurso = new curso.Curso();
-    newCurso.set(req.body.id,req.body.title, req.body, req.link);
+    newCurso.set(req.body.id,req.body.title, req.body.content);
     console.log("Aqui");
     console.log(newCurso);
     courseIndex = cursos .findIndex(curso =>  curso.id == newCurso.id);
@@ -124,7 +124,7 @@ app.put('/cursos', function(req,res){
         res.status(200).send("Course Updated");
     }
     else{
-        res.status(400) .send("Course not Updated");
+        res.status(400) .send("Course Not Updated");
     }
     
     
