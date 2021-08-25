@@ -3,6 +3,7 @@ var express = require('express'); // Usamos a biblioteca express do nodejs
 var user = require("./user");
 var material = require("./material")
 var curso = require("./curso");
+var instituicoes = require("./instituicoes");
 var app = express();
 
 var allowCrossDomain = function(req, res, next) {
@@ -16,7 +17,7 @@ app.use(allowCrossDomain); // Isso permite o nosso frontend fazer requisições 
 app.use(express.json());  // O server espera receber arquivos json (Eu acho)
 
 var userDict = new Map();
-
+var instituicaoDict = new Map();
 var materialDict = new Map();
 
 var cursos = [];
@@ -40,7 +41,6 @@ app.post("/createAccount", function (req, res) {
 
 app.post("/login", function (req, res) {
     var newUser = new user.User();
-    console.log(req.body);
     newUser.set_user_data(req.body.nome, req.body.email, req.body.hashedpsw);
     if (userDict.has(newUser.email) && userDict.get(newUser.email).hashedpsw==newUser.hashedpsw) {
         res.status(200).send("Confirmado");
@@ -48,7 +48,12 @@ app.post("/login", function (req, res) {
     else {
         res.status(400).send("Inexistente");
     }
-    console.log(userDict); // É como um print
+})
+
+app.delete("/createAccount", function name(req, res) {
+    userDict = new Map();
+    res.send();
+    console.log(userDict);
 })
 
 // Essa função é chamada quando o server recebe uma requisição POST enviada para /adMaterial
@@ -67,10 +72,23 @@ app.post("/adMaterial", function (req, res) {
         materialDict.set(newMaterial.link, newMaterial);
         res.status(200).send("Done");
     }
-    console.log(materialDict); // É como um print
+    // console.log(materialDict); // É como um print
 
     })
 
+    app.post("/cadastraInst", function (req, res) {
+        var newInst = new instituicoes.Instituicoes();
+        console.log("aaa")
+        newInst.set_instituicao_data(req.body.nomeinstit, req.body.emailinst, req.body.codigocadastro);
+        if (instituicaoDict.has(newInst.emailinst)) {
+            res.status(400).send("Existing Instituicao");
+        }
+        else {
+            instituicaoDict.set(newInst.emailinst, newInst);
+            res.status(200).send("Done");
+        }
+        console.log(instituicaoDict); // É como um print
+    })
 
 app.post('/cursos', function(req,res){
     
@@ -110,3 +128,22 @@ app.delete('/cursos/:id', function(req,res){
     cursos = newCursos;
     res.status(200).send("Course Deleted");
 });
+
+
+app.put('/cursos', function(req,res){
+   
+    newCurso = new curso.Curso();
+    newCurso.set(req.body.id,req.body.title, req.body.content);
+    console.log("Aqui");
+    console.log(newCurso);
+    courseIndex = cursos .findIndex(curso =>  curso.id == newCurso.id);
+    if(courseIndex != -1){
+        cursos[courseIndex] = newCurso;
+        res.status(200).send("Course Updated");
+    }
+    else{
+        res.status(400) .send("Course Not Updated");
+    }
+    
+    
+})

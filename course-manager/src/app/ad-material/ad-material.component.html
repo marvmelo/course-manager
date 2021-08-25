@@ -7,7 +7,7 @@
             Nome do Arquivo
         </td>
         <td>
-            <input [(ngModel)]="nome" name="namebox">
+            <input [(ngModel)]="material.nome" name="namebox">
         </td>
     </tr>
     <tr>
@@ -15,7 +15,7 @@
             Tipo do arquivo
         </td>
         <td>
-            <input [(ngModel)]="tipo" name="tipobox">
+            <input [(ngModel)]="material.tipo" name="tipobox">
         </td>
     </tr>
     <tr>
@@ -23,7 +23,7 @@
             Link para o arquivo
         </td>
         <td>
-            <input [(ngModel)]="link" name="linkbox">
+            <input [(ngModel)]="material.link" name="linkbox">
         </td>
     </tr>
     <tr>
@@ -31,7 +31,7 @@
             Selecionar Curso
         </td>
         <select [(ngModel)]="selectCurso">
-            <option *ngFor="let c of cursos" [value]="c.id">
+            <option *ngFor="let c of cursos" [value]="c.id" name="cascataOptions">
               {{c.title}}
             </option>
         </select>

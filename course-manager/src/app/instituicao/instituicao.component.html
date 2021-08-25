@@ -1,0 +1,35 @@
+<h2>
+    Cadastrar Instituição
+</h2>
+<table>
+    <tr>
+        <td>
+            Nome da Instituição: 
+        </td>
+        <td>
+            <input [(ngModel)]="nomeinstit" name="nameinstbox">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Email da instituição: 
+        </td>
+        <td>
+            <input [(ngModel)]="emailinst" name="emailinstbox">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Código de cadastro: 
+        </td>
+        <td>
+            <input [(ngModel)]="codigocadastro" name="codigobox">
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align: right;">
+            <button (click)="cadastraInst(instituicoes)" name="instbutton">Confirmar</button>
+        </td>
+    </tr>
+</table>

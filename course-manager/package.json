@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "~12.1.0-",
     "@angular/router": "~12.1.0-",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^4.6.0",
     "crypto": "^1.0.1",
     "crypto-js": "^4.1.1",
     "hasha": "^5.2.2",

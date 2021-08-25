@@ -11,6 +11,7 @@ import { RouterModule }   from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AdMaterialComponent } from './ad-material/ad-material.component';
 import { AvaliarCursoComponent } from './avaliar-curso/avaliar-curso.component';
+import { InstituicaoComponent } from './instituicao/instituicao.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 	GerenciarCursosComponent,
 	CursosComponent,
  	AdMaterialComponent,
-    AvaliarCursoComponent 
+    AvaliarCursoComponent,
+	InstituicaoComponent 
   	],
   imports: [
     BrowserModule,
@@ -53,6 +55,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 		{
 			path: 'avaliar-curso',
 			component: AvaliarCursoComponent 
+		},
+		{
+			path: 'cadastrar-instituicao',
+			component: InstituicaoComponent 
 		}
 
 	]), NgbModule
