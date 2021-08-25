@@ -41,7 +41,7 @@
                 <td>{{c.title}}</td>
                 <td>
                     <select [(ngModel)]="selectMaterial">
-                        <option *ngFor="let m of c.content" [value]="m[2]">
+                        <option *ngFor="let m of c.content" [value]="m[2]" name = "MateriaDentroCurso">
                         {{m[0]}}
                         </option>
                     </select>
