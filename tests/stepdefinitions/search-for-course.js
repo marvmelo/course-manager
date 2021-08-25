@@ -32,6 +32,13 @@ addCourse = async function(curso){
 
 //Primeiro Cenário
 
+
+
+
+
+
+
+
 Given('Os cursos {string}, {string}, {string} e {string} estão cadastrados no sistema',
 async function(curso1,curso2,curso3,curso4){
     await browser.get("localhost:4200/gerenciar-cursos");
@@ -51,8 +58,9 @@ async function(curso1,curso2,curso3,curso4){
 
 Given('Eu estou na aba {string}', async function (string) {
     // Write code here that turns the phrase above into concrete actions
-    await browser.wait(ExpectedConditions.elementToBeClickable(element(by.name('cursosLink'))));
-    await element(by.name('cursosLink')).click();
+    browser.get("localhost:4200/cursos");
+    //await browser.wait(ExpectedConditions.elementToBeClickable(element(by.name('cursosLink'))));
+    //await element(by.name('cursosLink')).click();
    // return 'pending';
 });
 
