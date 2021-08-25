@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { User } from './user';
 import { Curso } from '../../../common/curso'
 import { Material } from "./material";
+import { Instituicoes } from './instituicoes';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +39,12 @@ export class CadastroService {
     //alert("Here");
     return this.http.delete<string>(this.serverUrl + "cursos"  + "/"  + id,  {responseType: 'text' as 'json' , observe: 'body'}).toPromise();
 
+  }
+
+  sendNewInst(instituicoes: Instituicoes): Promise<string>{
+   
+    return this.http.post<string>(this.serverUrl + "cadastraInst", instituicoes, {responseType: 'text' as 'json' , observe: 'body'})
+    .toPromise()
   }
 
   putCurso(curso:Curso): Promise<string> {
