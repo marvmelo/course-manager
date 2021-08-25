@@ -10,7 +10,8 @@ export class Curso{
     title:string;
     amountStudents: number;
     content:String[][];
-    materials:string[] =[]
+    materials:string[] =[];
+    avaliacao:number[] = [];
 
     constructor(){
         this.id = 0;
@@ -18,6 +19,7 @@ export class Curso{
         this.amountStudents = 0;
         this.content = [];
         this.materials = [];
+        this.avaliacao = [];
     }
 
     copy(): Curso {
@@ -26,13 +28,15 @@ export class Curso{
         newCurso.title = this.title;
         newCurso.amountStudents = this.amountStudents;
         newCurso.content = this.content;
+        newCurso.avaliacao = this.avaliacao;
         return newCurso;
     }
-    set(id:number, title: string, content:String[][], amountStudents: number): void{
+    set(id:number, title: string, content:String[][], amountStudents: number, avaliacao:number[]): void{
         this.id = id;
         this.title = title;
         this.amountStudents = amountStudents;
         this.content = content;
+        this.avaliacao = avaliacao;
         //this.materials = materials;
     }
 
@@ -49,6 +53,7 @@ export class Curso{
         this.title = "";
         this.amountStudents = 0;
         this.content = [];
+        this.avaliacao = []
         //this.materials = [[]];
     }
 }
