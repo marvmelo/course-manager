@@ -17,7 +17,7 @@ import { Curso } from '../../../../common/curso';
     nome: string = "";
     tipo: string = "";
     link: string = "";
-    selectCurso: string = "Selecionar";
+    selectCurso: string = "";
     material: Material = new Material();
     cursos: Curso[] = [];
 
@@ -42,7 +42,6 @@ import { Curso } from '../../../../common/curso';
     this.nome = "";
     this.tipo = "";
     this.link = "";
-    window.alert(this.selectCurso)
     }
 
     private failureCreationInvalid(): void {
@@ -54,14 +53,15 @@ import { Curso } from '../../../../common/curso';
     }
 
     private thereIsInvalidValues(): Boolean {
-      if (this.nome=="" || this.tipo=="" || this.link=="") {
+      if (this.nome=="" || this.tipo=="" || this.link=="" || this.selectCurso=="") {
         return true;
       }
       return false;
     }
 
   ngOnInit(): void {
-    this.cadastroService.getCursos().then((value:Curso[]) => {this.cursos = value});  
+    this.cadastroService.getCursos().then((value:Curso[]) => {this.cursos = value; this.selectCurso = value[0].id.toString()});  
+  
   }
 
 }

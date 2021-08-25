@@ -16,7 +16,7 @@ exports.config = {
     frameworkPath: require.resolve('protractor-cucumber-framework'),  // path relative to the current config file
   
     specs: [
-      '../features/login.feature' ,
+      '../features/ad-Material.feature'
     ],
   
     // cucumber command line options
