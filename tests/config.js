@@ -17,8 +17,12 @@ exports.config = {
   
     specs: [
 
+
       //'../features/*.feature' //,
-      //'../features/accountcreation.feature',
+
+      '../features/*.feature', //,
+
+      '../features/accountcreation.feature',
       //'../features/search-for-course.feature',  // Specs here are the cucumber feature files
       '../features/ad-Material.feature'
 
