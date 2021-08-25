@@ -31,7 +31,7 @@
             Selecionar Curso
         </td>
         <select [(ngModel)]="selectCurso">
-            <option *ngFor="let c of cursos" [value]="c.id">
+            <option *ngFor="let c of cursos" [value]="c.id" name="cascataOptions">
               {{c.title}}
             </option>
         </select>
