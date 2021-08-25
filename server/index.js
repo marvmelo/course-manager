@@ -67,7 +67,7 @@ app.post("/adMaterial", function (req, res) {
         materialDict.set(newMaterial.link, newMaterial);
         res.status(200).send("Done");
     }
-    console.log(materialDict); // É como um print
+    // console.log(materialDict); // É como um print
 
     })
 
@@ -110,3 +110,22 @@ app.delete('/cursos/:id', function(req,res){
     cursos = newCursos;
     res.status(200).send("Course Deleted");
 });
+
+
+app.put('/cursos', function(req,res){
+   
+    newCurso = new curso.Curso();
+    newCurso.set(req.body.id,req.body.title, req.body, req.link);
+    console.log("Aqui");
+    console.log(newCurso);
+    courseIndex = cursos .findIndex(curso =>  curso.id == newCurso.id);
+    if(courseIndex != -1){
+        cursos[courseIndex] = newCurso;
+        res.status(200).send("Course Updated");
+    }
+    else{
+        res.status(400) .send("Course not Updated");
+    }
+    
+    
+})

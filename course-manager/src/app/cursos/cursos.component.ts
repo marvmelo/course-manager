@@ -44,6 +44,7 @@ export class CursosComponent implements OnInit {
   ngOnInit(): void {
     this.cadastroService.getCursos().then((value)=> this.cursos = value);
     this.search(this.cursos,this.searchText);
+  
     
   }
 

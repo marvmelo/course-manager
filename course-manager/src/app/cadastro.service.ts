@@ -28,7 +28,7 @@ export class CadastroService {
   sendNewMaterial(material: Material): Promise<string>{
   return this.http.post<string>(this.serverUrl + "adMaterial", material, {responseType: 'text' as 'json' , observe: 'body'})
   .toPromise()
-}
+  }
 
   getCursos() : Promise<Curso[]>{
     return this.http.get<Curso[]>(this.serverUrl + "cursos").toPromise();
@@ -38,6 +38,11 @@ export class CadastroService {
     //alert("Here");
     return this.http.delete<string>(this.serverUrl + "cursos"  + "/"  + id,  {responseType: 'text' as 'json' , observe: 'body'}).toPromise();
 
+  }
+
+  putCurso(curso:Curso): Promise<string> {
+    alert("putCurso");
+    return this.http.put<string>(this.serverUrl + "cursos", curso,  {responseType: 'text' as 'json' , observe: 'body'}).toPromise();
   }
 
 }

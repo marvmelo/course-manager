@@ -20,6 +20,8 @@ import { Curso } from '../../../../common/curso';
     selectCurso: string = "Selecionar";
     material: Material = new Material();
     cursos: Curso[] = [];
+    newCurso:Curso = new Curso();
+
 
     adMaterial(fMaterial: Material): void {
     // Essa função é chamada pelo html quando o botão é apertado
@@ -36,6 +38,14 @@ import { Curso } from '../../../../common/curso';
       (value) => {this.succesCreation();},
       (value) => {if (value.error="Existing Material") {this.failureCreationExisting();}}
     );
+
+
+
+
+
+      this.cadastroService.putCurso(this.newCurso).then();
+
+
   }
     private succesCreation(): void {
     window.alert("Arquivo adicionado!");
@@ -62,6 +72,7 @@ import { Curso } from '../../../../common/curso';
 
   ngOnInit(): void {
     this.cadastroService.getCursos().then((value:Curso[]) => {this.cursos = value});  
+    this.newCurso.set(-1,"Emptyness",[],-1);
   }
 
 }
