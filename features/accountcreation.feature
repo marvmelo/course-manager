@@ -22,7 +22,7 @@ Feature: Criar Cadastro
         Given eu estou deslogado
         And eu estou na página "Criar cadastro"
         When eu insiro as informações de nome, email e senha "", "" e ""
-        When eu aperto em "Clicar conta"
+        When eu aperto em "Criar conta"
         Then eu vejo uma mensagem "Formulário Incompleto!"
     Scenario: Criar cadastro com senha já existente
         Given eu estou deslogado
