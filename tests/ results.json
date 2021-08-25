@@ -13,13 +13,13 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 8,
-            "name": "eu estou deslogado",
+            "name": "eu estou logado",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:14"
+              "location": "stepdefinitions/accountcreationlogin.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 881000000
+              "duration": 1113000000
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 9,
             "name": "há conta com nome, email e senha \"Barbara\", \"barbie100@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:32"
+              "location": "stepdefinitions/accountcreationlogin.js:34"
             },
             "result": {
               "status": "passed",
-              "duration": 18000000
+              "duration": 2000000
             }
           },
           {
@@ -41,11 +41,12 @@
             "line": 10,
             "name": "eu insiro as informações de email e senha \"barbie100@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:37"
+              "location": "stepdefinitions/accountcreationlogin.js:39"
             },
             "result": {
-              "status": "passed",
-              "duration": 348000000
+              "status": "failed",
+              "duration": 1006000000,
+              "error_message": "TimeoutError: Wait timed out after 1002ms\n    at /usr/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2201:17\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
             }
           },
           {
@@ -54,11 +55,11 @@
             "line": 11,
             "name": "eu aperto em \"Acessar Conta\"",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:53"
+              "location": "stepdefinitions/accountcreationlogin.js:55"
             },
             "result": {
-              "status": "passed",
-              "duration": 430000000
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -67,11 +68,11 @@
             "line": 12,
             "name": "eu vejo os recursos da aplicação",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:72"
+              "location": "stepdefinitions/accountcreationlogin.js:74"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -79,7 +80,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 16000000
+              "duration": 11000000
             }
           }
         ],
@@ -99,12 +100,11 @@
             "line": 14,
             "name": "eu estou deslogado",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:14"
+              "location": "stepdefinitions/accountcreationlogin.js:16"
             },
             "result": {
-              "status": "failed",
-              "duration": 51000000,
-              "error_message": "UnexpectedAlertOpenError: Dismissed user prompt dialog: Informações Incorretas: \nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'\nSystem info: host: 'marcus-hp', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.52-1-MANJARO', java.version: '1.8.0_292'\nDriver info: driver.version: unknown\n    at Object.checkLegacyResponse (/usr/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/error.js:553:13)\n    at parseHttpResponse (/usr/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at /usr/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/http.js:441:30\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at World.<anonymous> (/home/marcusvm/Code/ess/tests/stepdefinitions/accountcreationlogin.js:15:3)"
+              "status": "passed",
+              "duration": 382000000
             }
           },
           {
@@ -113,11 +113,11 @@
             "line": 15,
             "name": "há conta com nome, email e senha \"Barbara\", \"barbie100@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:32"
+              "location": "stepdefinitions/accountcreationlogin.js:34"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -126,11 +126,11 @@
             "line": 16,
             "name": "eu insiro as informações de email e senha \"barbie100@hotmail.com\" e \"Trovador\"",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:37"
+              "location": "stepdefinitions/accountcreationlogin.js:39"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 206000000
             }
           },
           {
@@ -139,11 +139,11 @@
             "line": 17,
             "name": "eu aperto em \"Acessar Conta\"",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:53"
+              "location": "stepdefinitions/accountcreationlogin.js:55"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 333000000
             }
           },
           {
@@ -152,11 +152,11 @@
             "line": 18,
             "name": "eu vejo uma mensagem \"Informações Incorretas\"",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:64"
+              "location": "stepdefinitions/accountcreationlogin.js:66"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 2064000000
             }
           },
           {
@@ -184,11 +184,11 @@
             "line": 20,
             "name": "eu estou deslogado",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:14"
+              "location": "stepdefinitions/accountcreationlogin.js:16"
             },
             "result": {
               "status": "passed",
-              "duration": 469000000
+              "duration": 386000000
             }
           },
           {
@@ -197,11 +197,11 @@
             "line": 21,
             "name": "eu insiro as informações de email e senha \"\" e \"\"",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:37"
+              "location": "stepdefinitions/accountcreationlogin.js:39"
             },
             "result": {
               "status": "passed",
-              "duration": 220000000
+              "duration": 125000000
             }
           },
           {
@@ -210,11 +210,11 @@
             "line": 22,
             "name": "eu aperto em \"Acessar Conta\"",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:53"
+              "location": "stepdefinitions/accountcreationlogin.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 244000000
+              "duration": 201000000
             }
           },
           {
@@ -223,11 +223,11 @@
             "line": 23,
             "name": "eu vejo uma mensagem \"Informações Incorretas\"",
             "match": {
-              "location": "stepdefinitions/accountcreationlogin.js:64"
+              "location": "stepdefinitions/accountcreationlogin.js:66"
             },
             "result": {
               "status": "passed",
-              "duration": 2065000000
+              "duration": 2060000000
             }
           },
           {
@@ -235,7 +235,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 10000000
+              "duration": 11000000
             }
           }
         ],

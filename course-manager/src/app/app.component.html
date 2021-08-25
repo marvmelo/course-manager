@@ -14,5 +14,6 @@
 		<a routerLink="/avaliar-curso">Avaliar Curso</a>
 	</nav>
 </header>
+<button *ngIf="(!logado);" (click)="logar()" name="testlogin"></button>
 <router-outlet></router-outlet>
 </html>

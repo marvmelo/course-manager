@@ -8,6 +8,8 @@ chai.use(chaiAsPromised);
 var expect = chai.expect;
 
 Given('eu estou logado', async function () {
+  browser.get("localhost:4200")
+  await browser.wait(ExpectedConditions.elementToBeClickable(element(by.name('testlogin'))));
   await element(by.name('testlogin')).click()
 })
 
