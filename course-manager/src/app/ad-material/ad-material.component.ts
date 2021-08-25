@@ -46,7 +46,7 @@ import { Curso } from '../../../../common/curso';
 
     this.cadastroService.sendNewMaterial(fMaterial)
     .then(
-      (value) => {this.succesCreation(); Promise.resolve(this.newMaterial()).then( result => {this.cadastroService.putCurso(this.newCurso).then()});},
+      (value) => {this.succesCreation(); Promise.resolve(this.newMaterial()).then( result => {this.cadastroService.putCurso(this.newCurso).then(value => {this.material.nome = ""; this.material.tipo = ""; this.material.link = "";})});},
       (value) => {if (value.error="Existing Material") {this.failureCreationExisting();}}
     );
 
@@ -57,9 +57,9 @@ import { Curso } from '../../../../common/curso';
   }
     private succesCreation(): void {
     window.alert("Arquivo adicionado!");
-    this.material.nome = "";
-    this.material.tipo = "";
-    this.material.link = "";
+    //this.material.nome = "";
+    //this.material.tipo = "";
+    //this.material.link = "";
     }
 
     private failureCreationInvalid(): void {
