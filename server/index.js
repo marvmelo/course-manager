@@ -51,6 +51,12 @@ app.post("/login", function (req, res) {
     console.log(userDict); // É como um print
 })
 
+app.delete("/createAccount", function name(req, res) {
+    userDict = new Map();
+    res.send();
+    console.log(userDict);
+})
+
 // Essa função é chamada quando o server recebe uma requisição POST enviada para /adMaterial
 // Ela verifica se o link já está cadastro em materialDict e cadastra, se não estiver.
 // Os paramêtros dela são endereço atribuido a ela e uma função cujos os paramêtros são a requisição e a resposta
