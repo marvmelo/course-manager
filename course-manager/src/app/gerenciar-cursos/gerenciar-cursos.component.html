@@ -34,6 +34,7 @@
                 <th>Materiais</th>
                 <th>Qtde. máx. de alunos</th>
                 <th>Ações</th>
+                <th>Avaliações</th>
             </tr>
         </thead>
         <tbody>
@@ -51,11 +52,14 @@
                 </td>
                 <td>
                     {{c.amountStudents}}
-                </td>
+                </td>     
+                <td>                   
+                    <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+                </td>           
                 <td>
                     <button type="button" class="btn btn-outline-danger" (click) = "deleteCurso(c.id)" name = "removeButton">Remover Curso</button>
                 </td>
-            </tr>
+            </tr>           
         </tbody>
     </table>
 </div>

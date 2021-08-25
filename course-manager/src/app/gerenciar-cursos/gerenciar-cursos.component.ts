@@ -18,6 +18,7 @@ export class GerenciarCursosComponent implements OnInit {
   link:string = "";
   material:Material = new Material();
   sortedCourses:Curso[] = [];
+  starRating = 0;
 
   
   createCurso(newCurso:Curso) :void{
