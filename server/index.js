@@ -40,7 +40,6 @@ app.post("/createAccount", function (req, res) {
 
 app.post("/login", function (req, res) {
     var newUser = new user.User();
-    console.log(req.body);
     newUser.set_user_data(req.body.nome, req.body.email, req.body.hashedpsw);
     if (userDict.has(newUser.email) && userDict.get(newUser.email).hashedpsw==newUser.hashedpsw) {
         res.status(200).send("Confirmado");
@@ -48,7 +47,12 @@ app.post("/login", function (req, res) {
     else {
         res.status(400).send("Inexistente");
     }
-    console.log(userDict); // É como um print
+})
+
+app.delete("/createAccount", function name(req, res) {
+    userDict = new Map();
+    res.send();
+    console.log(userDict);
 })
 
 // Essa função é chamada quando o server recebe uma requisição POST enviada para /adMaterial

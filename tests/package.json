@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "axios": "^0.21.1",
     "cucumber-html-reporter": "^5.4.0",
     "protractor": "^7.0.0",
     "request": "^2.88.2",
