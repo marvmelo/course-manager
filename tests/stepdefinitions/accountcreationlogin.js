@@ -1,13 +1,17 @@
 const { Given, When,Then } = require("@cucumber/cucumber")
 const { browser, $, element, ExpectedConditions } = require("protractor")
-const { request } = require("request")
+const axios = require("axios").default;
 var chai = require("chai");
 var chaiAsPromised = require("chai-as-promised");
 
 chai.use(chaiAsPromised);
 var expect = chai.expect;
 
-Given('eu estou deslogado', function () {
+Given('eu estou logado', async function () {
+  await element(by.name('testlogin')).click()
+})
+
+Given('eu estou deslogado', async function () {
   await browser.get("localhost:4200");
   await expect(browser.getTitle()).to.eventually.equal("CourseManager");
 });
@@ -21,25 +25,20 @@ Given('eu estou na página {string}', async function (pagina) {
   }
 });
 
-Given('não há conta com nome, email e senha {string}, {string} e {string}', function (string, string2, string3) {
-  request.delete("localhost:3000/createAccount")
+Given('não há conta com nome, email e senha {string}, {string} e {string}', async function (string, string2, string3) {
+  //axios.delete("localhost:3000/createAccount");
 });
 
-Given('há conta com nome, email e senha {string}, {string} e {string}', function (nome, email, senha) {
-  request.delete("localhost:3000/createAccount")
-  request.post("localhost:3000/createAccount", form(
-    {
-      'content-type' : 'application/json',
-      body: {'nome': nome, 'email': email, 'hashedpsw': senha} 
-    }
-  ));
+Given('há conta com nome, email e senha {string}, {string} e {string}', async function (nome, email, senha) {
+  //axios.delete("localhost:3000/createAccount");
+  //axios.post("localhost:3000/createAccount", {"nome": nome, "email": email, "hashedpsw": senha});
 });
 
 When('eu insiro as informações de email e senha {string} e {string}', async function(email, senha){
-  await browser.wait(ExpectedConditions.presenceOf($("input[name='emailbox']")), 1000);
-  await $("input[name='emailbox']").clear().sendKeys(email);
-  await browser.wait(ExpectedConditions.presenceOf($("input[name='passwordbox']")), 1000);
-  await $("input[name='passwordbox']").clear().sendKeys(senha);
+  await browser.wait(ExpectedConditions.presenceOf($("input[name='loginemailbox']")), 1000);
+  await $("input[name='loginemailbox']").clear().sendKeys(email);
+  await browser.wait(ExpectedConditions.presenceOf($("input[name='loginpasswordbox']")), 1000);
+  await $("input[name='loginpasswordbox']").clear().sendKeys(senha);
 });
 
 When('eu insiro as informações de nome, email e senha {string}, {string} e {string}', async function (nome, email, senha) {
@@ -70,9 +69,9 @@ Then('eu vejo uma mensagem {string}', async function (mensagem) {
   await browser.sleep(2000);
 });
 
-Then('eu vou para página {string}', async function (pagina) {
-  if (pagina=="Fazer login") {
-    await browser.wait(ExpectedConditions.elementToBeClickable(element(by.name('loginredirect'))));
-    await element(by.name('loginredirect')).click();
-  }
-});
+Then("eu vejo os recursos da aplicação", async function () {
+  await browser.ExpectedConditions.presenceOf(element(by.name("cursosLink")));
+  await browser.ExpectedConditions.presenceOf(element(by.name("gerLink")));
+  //await browser.ExpectedConditions.presenceOf(element(by.name()));
+
+})

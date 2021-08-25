@@ -1,0 +1,253 @@
+[
+  {
+    "description": "    As a usuário\n    I want to logar\n    So that eu possa usar os recursos só diponíveis a usuários logados",
+    "elements": [
+      {
+        "description": "",
+        "id": "logar;fazer-login",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Fazer login",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 881000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "há conta com nome, email e senha \"Barbara\", \"barbie100@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "eu insiro as informações de email e senha \"barbie100@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 348000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "eu aperto em \"Acessar Conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 430000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "eu vejo os recursos da aplicação",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "logar;fazer-login-com-senha-errada",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Fazer login com senha errada",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:14"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 51000000,
+              "error_message": "UnexpectedAlertOpenError: Dismissed user prompt dialog: Informações Incorretas: \nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'\nSystem info: host: 'marcus-hp', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.52-1-MANJARO', java.version: '1.8.0_292'\nDriver info: driver.version: unknown\n    at Object.checkLegacyResponse (/usr/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/error.js:553:13)\n    at parseHttpResponse (/usr/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/http.js:509:13)\n    at /usr/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/http.js:441:30\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at World.<anonymous> (/home/marcusvm/Code/ess/tests/stepdefinitions/accountcreationlogin.js:15:3)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "há conta com nome, email e senha \"Barbara\", \"barbie100@hotmail.com\" e \"CorrectHorseBatteryStaple\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:32"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "eu insiro as informações de email e senha \"barbie100@hotmail.com\" e \"Trovador\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:37"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "eu aperto em \"Acessar Conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:53"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "eu vejo uma mensagem \"Informações Incorretas\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:64"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "logar;fazer-login-sem-informar-dados",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Fazer login sem informar dados",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "eu estou deslogado",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 469000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "eu insiro as informações de email e senha \"\" e \"\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 220000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "eu aperto em \"Acessar Conta\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 244000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "eu vejo uma mensagem \"Informações Incorretas\"",
+            "match": {
+              "location": "stepdefinitions/accountcreationlogin.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2065000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "logar",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Logar",
+    "tags": [],
+    "uri": "../features/login.feature"
+  }
+]
