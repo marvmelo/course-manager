@@ -19,12 +19,12 @@ Given('eu estou deslogado', async function () {
 });
 
 Given('eu estou na página {string}', async function (pagina) {
-  if (pagina=="Fazer login") {
-    await browser.getCurrentUrl().to.eventually.equal("localhost:4200/cadastro").then( e => {console.log(e)});
+  if (pagina=="Criar cadastro") {
+    await browser.get("localhost:4200/cadastro");
   }
-  else if (pagina=="Main") {
-    await browser.getCurrentUrl().to.eventually.equal("localhost:4200/main");
-  }
+});
+
+Given('há conta com nome, email e senha {string}, {string}, {string}', function (string, string2, string3) {
 });
 
 Given('não há conta com nome, email e senha {string}, {string} e {string}', async function (string, string2, string3) {
@@ -50,6 +50,7 @@ When('eu insiro as informações de nome, email e senha {string}, {string} e {st
   await $("input[name='emailbox']").clear().sendKeys(email);
   await browser.wait(ExpectedConditions.presenceOf($("input[name='passwordbox']")), 1000);
   await $("input[name='passwordbox']").clear().sendKeys(senha);
+  await browser.sleep(1000);
 });
 
 When('eu aperto em {string}', async function (botao) {
@@ -67,8 +68,8 @@ Then('eu vejo uma mensagem {string}', async function (mensagem) {
   await browser.wait(ExpectedConditions.alertIsPresent(), 1000);
   var alet_box =  browser.switchTo().alert();
   await expect(alet_box.getText()).to.eventually.equal(mensagem);
+  await browser.sleep(1000);
   await alet_box.accept();
-  await browser.sleep(2000);
 });
 
 Then("eu vejo os recursos da aplicação", async function () {
