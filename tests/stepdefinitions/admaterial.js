@@ -12,18 +12,29 @@ addMaterial = async function(nome, tipo, link){
     await $("input[name = 'linkbox']").sendKeys(link);
     
 }
+Given("Eu estou logado", async function(nome, email, senha){
+    await browser.get("localhost:4200/cadastro");
+    await browser.wait(ExpectedConditions.presenceOf(element(by.name("namebox"))), 1000);
+    await element(by.name("namebox")).sendKeys(nome);
+    await browser.wait(ExpectedConditions.presenceOf($("input[name='emailbox']")), 1000);
+    await $("input[name='emailbox']").clear().sendKeys(email);
+    await browser.wait(ExpectedConditions.presenceOf($("input[name='passwordbox']")), 1000);
+    await $("input[name='passwordbox']").clear().sendKeys(senha);
+    await browser.wait(ExpectedConditions.elementToBeClickable(element(by.name('accountbutton'))));
+    await element(by.name('accountbutton')).click();
+});
 
 Given('Eu estou na página de {string}', async function(string) {
-    await browser.get("localhost:4200");
+    
     await browser.wait(ExpectedConditions.elementToBeClickable(element(by.name("adMLink"))));
     await element(by.name("adMLink")).click();
     //Entrará no main do site e clicará para mudar a página para Adicionar Material
 });
 
 When("Eu adiciono o material com o nome: {string}, o tipo: {string} e o link: {string}", async function(nome, tipo, link){
-    //await browser.wait(ExpectedConditions.presenceOf(element(by.name("namebox"))), 1000);
-    //await browser.wait(ExpectedConditions.presenceOf($("input[nome = 'tipobox']")), 1000);
-    //await browser.wait(ExpectedConditions.presenceOf($("input[nome = 'linkbox']")), 1300);
+    await browser.wait(ExpectedConditions.presenceOf(element(by.name("namebox"))), 300);
+    await browser.wait(ExpectedConditions.presenceOf($("input[nome = 'tipobox']")), 300);
+    await browser.wait(ExpectedConditions.presenceOf($("input[nome = 'linkbox']")), 300);
     await addMaterial(nome, tipo, link);
 
 });

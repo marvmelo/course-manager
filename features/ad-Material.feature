@@ -2,8 +2,9 @@ Feature: Adicionar Curso
 	Como usuário da plataforma
 	Desejo adicionar material
 
-	//Background:
-	//	Given Um curso foi selecionado na parte "SelectCurso"
+	Background:
+		Given Eu estou logado
+		#Given Um curso foi selecionado na parte "SelectCurso"
 
 	Scenario: Adicionar material com sucesso
 		Given Eu estou na página de "Adicionar Material"
