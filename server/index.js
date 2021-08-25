@@ -3,6 +3,7 @@ var express = require('express'); // Usamos a biblioteca express do nodejs
 var user = require("./user");
 var material = require("./material")
 var curso = require("./curso");
+var instituicoes = require("./instituicoes");
 var app = express();
 
 var allowCrossDomain = function(req, res, next) {
@@ -16,7 +17,7 @@ app.use(allowCrossDomain); // Isso permite o nosso frontend fazer requisições 
 app.use(express.json());  // O server espera receber arquivos json (Eu acho)
 
 var userDict = new Map();
-
+var instituicaoDict = new Map();
 var materialDict = new Map();
 
 var cursos = [];
@@ -75,6 +76,19 @@ app.post("/adMaterial", function (req, res) {
 
     })
 
+    app.post("/cadastraInst", function (req, res) {
+        var newInst = new instituicoes.Instituicoes();
+        console.log("aaa")
+        newInst.set_instituicao_data(req.body.nomeinstit, req.body.emailinst, req.body.codigocadastro);
+        if (instituicaoDict.has(newInst.emailinst)) {
+            res.status(400).send("Existing Instituicao");
+        }
+        else {
+            instituicaoDict.set(newInst.emailinst, newInst);
+            res.status(200).send("Done");
+        }
+        console.log(instituicaoDict); // É como um print
+    })
 
 app.post('/cursos', function(req,res){
     
