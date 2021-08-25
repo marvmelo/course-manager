@@ -43,7 +43,9 @@ import { Curso } from '../../../../common/curso';
 
 
 
-      this.cadastroService.putCurso(this.newCurso).then();
+      this.newMaterial().then( result => {this.cadastroService.putCurso(result).then()});
+
+      
 
 
   }
@@ -70,6 +72,14 @@ import { Curso } from '../../../../common/curso';
       return false;
     }
 
+
+
+  newMaterial() : Promise<Curso>{
+
+    this.newCurso.set(9001,"It is over 9000",[],90002);
+
+    return Promise.resolve(this.newCurso);
+  }
   ngOnInit(): void {
     this.cadastroService.getCursos().then((value:Curso[]) => {this.cursos = value});  
     this.newCurso.set(-1,"Emptyness",[],-1);
